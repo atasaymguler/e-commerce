@@ -1,0 +1,38 @@
+{
+  "users": [
+    {
+      "id": "9969",
+      "username": "deneme",
+      "eposta": "deneme@gmail.com",
+      "password": "Deneme123",
+      "passwordrepetition": "Deneme123",
+      "age": "24",
+      "gender": "male",
+      "isAdmin": true,
+      "token": "xcPI3EgjWtZLQnL"
+    },
+    {
+      "id": "803c",
+      "username": "mguleratasay",
+      "eposta": "deneme@gmail.com",
+      "password": "123456Aa",
+      "passwordrepetition": "123456Aa",
+      "age": "31",
+      "gender": "male",
+      "isAdmin": false,
+      "token": "eqsvxKk96yazXxt"
+    },
+    {
+      "id": "d121",
+      "username": "cafer",
+      "eposta": "meme@gmail.com",
+      "password": "123456Aa",
+      "passwordrepetition": "123456Aa",
+      "age": "23",
+      "gender": "female",
+      "isAdmin": false,
+      "token": "1Qis7FjN9xWiZDA"
+    }
+  ],
+  "products": []
+}
