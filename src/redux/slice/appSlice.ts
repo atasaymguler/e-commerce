@@ -9,7 +9,8 @@ export interface AppSliceType {
 
 const initialState: AppSliceType = {
   drawer: false,
-  user : localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user") as string) as RegisterUserType : null
+  user : null
+  // user : localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user") as string) as RegisterUserType : null
 }
 
 export const appSlice = createSlice({
@@ -18,10 +19,10 @@ export const appSlice = createSlice({
   reducers: {
     openDrawer : (state:AppSliceType) => {state.drawer = true},
     closeDrawer : (state:AppSliceType) => {state.drawer = false},
-  
+    setUser : (state:AppSliceType , action:PayloadAction<RegisterUserType|null>) => {state.user = action.payload}
   },
 })
 
-export const { openDrawer , closeDrawer } = appSlice.actions
+export const { openDrawer , closeDrawer,setUser } = appSlice.actions
 
 export default appSlice.reducer
