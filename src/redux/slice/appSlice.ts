@@ -3,26 +3,35 @@ import type { PayloadAction } from '@reduxjs/toolkit'
 import type { RegisterUserType } from '../../types/Types'
 
 export interface AppSliceType {
-  drawer: boolean,
-  user: RegisterUserType | null
+  backdrop: boolean,
+  user: RegisterUserType | null,
+  modal : boolean,
+  check : boolean,
 }
 
 const initialState: AppSliceType = {
-  drawer: false,
-  user : null
-  // user : localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user") as string) as RegisterUserType : null
+  backdrop: false,
+  user : null,
+  modal : false,
+  check : true,
+
 }
 
 export const appSlice = createSlice({
   name: 'app',
   initialState,
   reducers: {
-    openDrawer : (state:AppSliceType) => {state.drawer = true},
-    closeDrawer : (state:AppSliceType) => {state.drawer = false},
-    setUser : (state:AppSliceType , action:PayloadAction<RegisterUserType|null>) => {state.user = action.payload}
+    openBackdrop : (state:AppSliceType) => {state.backdrop = true},
+    closeBackdrop : (state:AppSliceType) => {state.backdrop = false},
+    setUser : (state:AppSliceType , action:PayloadAction<RegisterUserType|null>) => {state.user = action.payload},
+    setModal : (state:AppSliceType , action:PayloadAction<boolean>) => {state.modal = action.payload},
+     setCheck : (state:AppSliceType , action:PayloadAction<boolean>) => {
+     state.check = action.payload
   },
+   
+    }
 })
 
-export const { openDrawer , closeDrawer,setUser } = appSlice.actions
+export const { openBackdrop , closeBackdrop,setUser,setModal,setCheck } = appSlice.actions
 
 export default appSlice.reducer

@@ -1,5 +1,8 @@
 
 export interface RegisterUserType{
+    id?:string,
+    firstName:string,
+    lastName:string,
     username:string,
     eposta:string,
     password:string,
@@ -12,4 +15,13 @@ export interface RegisterUserType{
 export interface LoginUserType{
     userNameOrEmail:string,
     password:string,
+}
+
+export interface ChangeInfoType{
+    username? : string,
+    eposta?:string,
+    age?:number,
+    gender?:string,
+    firstName? : string,
+    lastName? : string
 }

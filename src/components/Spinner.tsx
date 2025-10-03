@@ -5,12 +5,12 @@ import type { RootState } from '../redux/store'
 
 export default function Spinner() {
 
-  const {drawer} = useSelector((state:RootState)=> state.app)
+  const {backdrop} = useSelector((state:RootState)=> state.app)
 
   return (
     <Backdrop
         sx={(theme) => ({ color: '#fff', zIndex: theme.zIndex.drawer + 1 })}
-       open={drawer}
+       open={backdrop}
       >
         <CircularProgress color="inherit" />
       </Backdrop>

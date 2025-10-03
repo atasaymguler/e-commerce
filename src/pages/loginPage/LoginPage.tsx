@@ -6,10 +6,11 @@ import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import { loginSchema } from "../../schema/LoginSchema";
 import { useDispatch } from "react-redux";
-import { closeDrawer, openDrawer } from "../../redux/slice/appSlice";
+
 import { checkUser } from "./checkUser";
 import { toast } from "react-toastify";
 import { findUser } from "./findUser";
+import { closeBackdrop, openBackdrop } from "../../redux/slice/appSlice";
 export default function RegisterPage() {
   const navigate = useNavigate();
   const dispatch = useDispatch()
@@ -17,7 +18,7 @@ export default function RegisterPage() {
   const submit = async() => {
     try {
     
-      dispatch(openDrawer())
+      dispatch(openBackdrop())
       let userCheck:boolean = await checkUser(values)
       if(userCheck){
         toast.success("Giriş Yapılıyor");
@@ -30,7 +31,7 @@ export default function RegisterPage() {
       toast.error("Giriş Yapılırken Hata Oluştu : "+error.message)
     }
     finally{
-      dispatch(closeDrawer())
+      dispatch(closeBackdrop())
     }
   }
 
@@ -134,6 +135,7 @@ export default function RegisterPage() {
               </p>
             </div>
           </div>
+     
         </form>
       </div>
     </div>

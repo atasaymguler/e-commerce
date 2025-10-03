@@ -3,26 +3,16 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
+
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../redux/store";
 import { setUser } from "../redux/slice/appSlice";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { useEffect } from "react";
-import type { RegisterUserType } from "../types/Types";
+
+import Icon from '../assets/Main1.jpg'
 
 export default function Navbar() {
-    
-    useEffect(()=>{
-        let userString =  localStorage.getItem("user")
-        let user : RegisterUserType;
-        if(userString){
-          user = JSON.parse(userString) as  RegisterUserType
-          dispatch(setUser(user))
-        }  
-   
-    },[])
     
     const {user} = useSelector((state:RootState)=> state.app)
     const dispatch = useDispatch()
@@ -33,9 +23,9 @@ export default function Navbar() {
         dispatch(setUser(null))
         navigate("/")
     }
-    
+ 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{height:"10vh",bgcolor:"#646161"}}>
       <Toolbar>
         <IconButton
           size="large"
@@ -43,15 +33,16 @@ export default function Navbar() {
           color="inherit"
           aria-label="menu"
           sx={{ mr: 2 }}
+        onClick={()=>{navigate("/home")}}
         >
-          <MenuIcon />
+          <img src={Icon} className="w-[50px] h-[50px] rounded-[50%]" />
         </IconButton>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           Plaza
         </Typography>
         <div className="flex justify-center items-center gap-5">
-            <p>Hoşgeldin,{user?.username}</p>
-          <Button onClick={logout} variant="contained" sx={{ textTransform: "none" }} color="secondary">
+            <p>Hoşgeldin,{user?.firstName}</p>
+          <Button onClick={logout} variant="outlined" sx={{ textTransform: "none" }}  color="inherit">
             Çıkış Yap
           </Button>
         </div>

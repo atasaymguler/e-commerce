@@ -13,5 +13,7 @@ export const registerSchema = yup.object().shape({
   passwordrepetition:yup.string().required("Tekrar Şifre Zorunlu").oneOf([yup.ref("password")],"Şifreler Uyuşmuyor"),
   age:yup.number().required("Yaş Zorunlu").integer("Yaş Küsüratlı Değer Olmamalı").positive("Yaş Negatif Değer Olmamalı"),
   gender:yup.string().required("Cinsiyet Zorunlu"),
-  isAdmin : yup.boolean()
+  isAdmin : yup.boolean(),
+  firstName : yup.string().required("Ad Alanı Zorunlu"),
+  lastName : yup.string().required("Soyad Alanı Zorunlu")
 })
