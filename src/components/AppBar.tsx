@@ -1,8 +1,5 @@
 import { Box, Button } from '@mui/material';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
+
 import ListItemText from '@mui/material/ListItemText';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import LockIcon from '@mui/icons-material/Lock';
@@ -28,20 +25,72 @@ export default function AppBar() {
     <div className='w-full bg-[#646161] h-[90vh] text-[#fff] flex justify-between flex-col items-center '>
    <div className='!mt-5 '>
     <div className='flex justify-between items-center !mb-3 '>
-       <Button  size='large' color='inherit' variant='text' sx={{textTransform:"none"}}>  <Link to={"/home/products"}> <ShoppingCartIcon />  <span className='!mx-5 text-[#fff] '>Ürünler</span></Link></Button>
+       {/* <Button  size='large' color='inherit' variant='text' sx={{textTransform:"none"}}>  <Link to={"/home/products"}> <ShoppingCartIcon />  <span className='!mx-5 text-[#fff] '>Ürünler</span></Link></Button> */}
+       <Button
+    size='large'
+    color='inherit'
+    variant='text'
+    sx={{ textTransform: "none" }}
+    component={Link}
+    to="/home/products"
+  >
+    <ShoppingCartIcon />
+    <span className='!mx-5 text-[#fff]'>Ürünler</span>
+  </Button>
     </div>
      <div className='flex justify-between items-center !mb-3'>
-       <Button size='large' color='inherit' variant='text' sx={{textTransform:"none"}}>  <Link to={"/home/basket"}>  <ShoppingBasketIcon />  <span className='!mx-5 text-[#fff]'>Sepetim</span></Link></Button>
+      <Button
+    size='large'
+    color='inherit'
+    variant='text'
+    sx={{ textTransform: "none" }}
+    component={Link}
+    to="/home/basket"
+  >
+    <ShoppingBasketIcon />
+    <span className='!mx-5 text-[#fff]'>Sepetim</span>
+     </Button>
     </div>
 
      <div className='flex justify-between items-center !mb-3'>
-       <Button size='large' color='inherit' variant='text' sx={{textTransform:"none"}}>  <Link to={"/home/past-orders"}>    <ContentPasteIcon />  <span className='!mx-5 text-[#fff]'>Geçmiş Siparişler</span></Link></Button>
+        <Button
+    size='large'
+    color='inherit'
+    variant='text'
+    sx={{ textTransform: "none" }}
+    component={Link}
+    to="/home/past-orders"
+  >
+    <ContentPasteIcon />
+    <span className='!mx-5 text-[#fff]'>Geçmiş Siparişler</span>
+     </Button>
     </div>
      <div className='flex justify-between items-center !mb-3'>
-       <Button size='large' color='inherit' variant='text' sx={{textTransform:"none"}}>  <Link to={"/home/account-details"}>  <AccountBoxIcon />  <span className='!mx-5 text-[#fff]'>Hesap Bilgileri</span></Link></Button>
+       <Button
+    size='large'
+    color='inherit'
+    variant='text'
+    sx={{ textTransform: "none" }}
+    component={Link}
+    to="/home/account-details"
+  >
+    <AccountBoxIcon />
+    <span className='!mx-5 text-[#fff]'>Hesap Bilgileri</span>
+     </Button>
     </div>
      <div className='flex justify-between items-center !mb-3'>
-       <Button size='large' color='inherit' variant='text' sx={{textTransform:"none"}}>  <Link to={"/home/privacy"}>    <LockIcon />  <span className='!mx-5 text-[#fff]'>Gizlilik</span></Link></Button>
+      
+         <Button
+    size='large'
+    color='inherit'
+    variant='text'
+    sx={{ textTransform: "none" }}
+    component={Link}
+    to="/home/privacy"
+  >
+     <LockIcon /> 
+    <span className='!mx-5 text-[#fff]'>Gizlilik</span>
+     </Button>
     </div>
    </div>
  

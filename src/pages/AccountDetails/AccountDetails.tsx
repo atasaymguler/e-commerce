@@ -68,9 +68,9 @@ export default function RegisterPage() {
   };
   
   return (
-    <div>
-      <div className=" h-[70vh] flex justify-center items-center">
-        <div className="h-1/2 w-1/2 bg-[#dfe6e9]  flex flex-col items-center justify-center  opacity-90 !p-5 rounded-md shadow-md !box-content">
+    <div className="h-full">
+      <div className=" h-full flex justify-center items-center">
+        <div className="h-1/2 w-1/2 bg-[#dfe6e9]  flex flex-col items-center justify-center  opacity-90 !p-5 rounded-md  !box-content shadow-lg">
           <fieldset  className="w-full" disabled={check}>
             <Formik
            innerRef={formikRef}
