@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import { useSelector } from 'react-redux';
 import type { RootState } from './redux/store';
 import MyModal from './components/MyModal';
+import AddProductModal from './components/AddProductModal';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
       <ToastContainer position='bottom-right' autoClose={2000} />
       <Spinner />
       <MyModal />
+      <AddProductModal />
     </div>
   )
 }

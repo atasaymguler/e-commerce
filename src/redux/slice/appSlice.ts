@@ -7,6 +7,8 @@ export interface AppSliceType {
   user: RegisterUserType | null,
   modal : boolean,
   check : boolean,
+  addProductModal : boolean,
+
 }
 
 const initialState: AppSliceType = {
@@ -14,7 +16,8 @@ const initialState: AppSliceType = {
   user : null,
   modal : false,
   check : true,
-
+  addProductModal : false,
+ 
 }
 
 export const appSlice = createSlice({
@@ -28,10 +31,12 @@ export const appSlice = createSlice({
      setCheck : (state:AppSliceType , action:PayloadAction<boolean>) => {
      state.check = action.payload
   },
+  setAddProductModal : (state:AppSliceType , action:PayloadAction<boolean>) => {state.addProductModal = action.payload},
    
-    }
+    },
+   
 })
 
-export const { openBackdrop , closeBackdrop,setUser,setModal,setCheck } = appSlice.actions
+export const { openBackdrop , closeBackdrop,setUser,setModal,setCheck,setAddProductModal } = appSlice.actions
 
 export default appSlice.reducer

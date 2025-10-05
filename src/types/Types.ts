@@ -27,10 +27,16 @@ export interface ChangeInfoType{
 }
 
 export interface ProductType{
-    id:number,
+    id:string,
     name:string,
     description:string,
     price:number,
     image:string,
-    title:string
+}
+
+export interface AddProductType{
+     productName:string,
+    description:string,
+    price:number,
+    image:string,
 }

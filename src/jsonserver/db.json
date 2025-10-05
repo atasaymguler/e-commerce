@@ -1,118 +1,209 @@
 {
-   "products": [
+  "products": [
     {
-      "id": 1,
-      "name": "Kahve Kupası",
-      "description": "Seramikten yapılmış, şık tasarımlı kahve kupası.",
-      "price": 79.99,
-      "image": "https://cdn03.ciceksepeti.com/cicek/kcm56682419-1/L/isme-ozel-kupa-bardak-bi-kahve-kcm56682419-1-3f6bba999b2a4133b866ef7dbf69e83e.jpg"
-    },
-    {
-      "id": 2,
+      "id": "2",
       "name": "Kablosuz Mouse",
       "description": "Ergonomik tasarıma sahip, sessiz tıklamalı kablosuz mouse.",
-      "price": 149.90,
+      "price": 149.9,
       "image": "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/125191099/125191099_0_MC/73019223.jpg"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Defter Seti",
       "description": "3'lü çizgili defter seti. Okul ve ofis kullanımı için ideal.",
       "price": 49.95,
       "image": "https://files.bundesign.com/dosyalar/2022/03/yesil-defter-divit-kalem.jpg"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Bluetooth Hoparlör",
       "description": "Taşınabilir, suya dayanıklı bluetooth hoparlör.",
-      "price": 299.00,
+      "price": 299,
       "image": "https://www.teknostore.com/image/cache/data/resimler/lecoo-rs19-rgb-aydinlatmali-bluetooth-stereo-10w-tasinabilir-hoparlor-siyah-25109-682x682.jpg"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Telefon Standı",
       "description": "Ayarlanabilir açılı masaüstü telefon standı.",
-      "price": 39.90,
+      "price": 39.9,
       "image": "https://cdn-img.pttavm.com/pimages/592/314/198/638d95dc0c087.jpg?v=202402141157"
     },
-     {
-    "id": 6,
-    "name": "Akıllı Su Şişesi",
-    "description": "Sıcaklık göstergeli, paslanmaz çelik akıllı su şişesi.",
-    "price": 249.90,
-    "image": "https://cdn.dsmcdn.com/mnresize/1200/1800/ty1081/product/media/images/prod/SPM/PIM/20231031/14/ea36a4a3-502b-3d3e-ae9a-06c7f34a63ce/1_org_zoom.jpg"
-  },
-  {
-    "id": 7,
-    "name": "LED Masa Lambası",
-    "description": "Dokunmatik kontrollü, 3 kademeli parlaklığa sahip LED masa lambası.",
-    "price": 189.00,
-    "image": "https://cdn.cimri.io/image/1000x1000/masa-lambasi_505129633.jpg"
-  },
-  {
-    "id": 8,
-    "name": "Manyetik Kablo Seti",
-    "description": "USB-C, Lightning ve Micro girişli 3'ü 1 arada manyetik şarj kablosu.",
-    "price": 129.90,
-    "image": "https://cdn.dsmcdn.com/mnresize/1200/1800/ty585/product/media/images/20221010/12/189870998/581908994/1/1_org_zoom.jpg"
-  },
-  {
-    "id": 9,
-    "name": "Mini Masa Vantilatörü",
-    "description": "USB bağlantılı, sessiz çalışan mini masa vantilatörü.",
-    "price": 99.90,
-    "image": "https://cdn.akakce.com/z/vantilator/usb-mini-masa-vantilatoru.jpg"
-  },
-  {
-    "id": 10,
-    "name": "Laptop Soğutucu Stand",
-    "description": "Ergonomik tasarımlı, çift fanlı dizüstü bilgisayar soğutucu.",
-    "price": 229.00,
-    "image": "https://cdn.dsmcdn.com/mnresize/1200/1800/ty505/product/media/images/20220815/13/159735176/552248249/1/1_org_zoom.jpg"
-  },
-  {
-    "id": 11,
-    "name": "Kablosuz Kulaklık",
-    "description": "Gürültü engelleyici özellikli, şarj kutulu bluetooth kulaklık.",
-    "price": 349.00,
-    "image": "https://cdn.dsmcdn.com/mnresize/1200/1800/ty446/product/media/images/20220505/11/109725642/470819089/1/1_org_zoom.jpg"
-  },
-  {
-    "id": 12,
-    "name": "Akıllı Bileklik",
-    "description": "Adım sayar, nabız ölçer ve uyku takibi özellikli fitness bilekliği.",
-    "price": 279.90,
-    "image": "https://cdn.dsmcdn.com/mnresize/1200/1800/ty459/product/media/images/20220531/14/122178268/485259005/1/1_org_zoom.jpg"
-  },
-  {
-    "id": 13,
-    "name": "Kablolu Oyun Klavyesi",
-    "description": "RGB aydınlatmalı, mekanik hissiyatlı oyuncu klavyesi.",
-    "price": 199.00,
-    "image": "https://cdn.dsmcdn.com/mnresize/1200/1800/ty566/product/media/images/20221001/15/191452407/573319002/1/1_org_zoom.jpg"
-  },
-  {
-    "id": 14,
-    "name": "Ofis Organizer Seti",
-    "description": "Kalemlik, notluk ve ataşlık içeren masaüstü organizer seti.",
-    "price": 89.90,
-    "image": "https://cdn03.ciceksepeti.com/cicek/kcm51197726-1/L/masaustu-organizer-seti-kcm51197726-1-5b9b2487d8b1408cbb33b1fffc44e5c8.jpg"
-  },
-  {
-    "id": 15,
-    "name": "Termoslu Seyahat Kupası",
-    "description": "Isıyı uzun süre koruyan paslanmaz çelik termos kupa.",
-    "price": 159.00,
-    "image": "https://cdn.dsmcdn.com/mnresize/1200/1800/ty463/product/media/images/20220604/20/124150009/487914066/1/1_org_zoom.jpg"
-  }
+    {
+      "id": "6",
+      "name": "Akıllı Su Şişesi",
+      "description": "Sıcaklık göstergeli, paslanmaz çelik akıllı su şişesi.",
+      "price": 249.9,
+      "image": "https://www.monofe.com/userfiles/urunler//480x480/96297_Hidrate_Spark_PRO_2_Akilli_Su_Sisesi_946mLStraw_1750169482_13.jpg"
+    },
+    {
+      "id": "7",
+      "name": "LED Masa Lambası",
+      "description": "Dokunmatik kontrollü, 3 kademeli parlaklığa sahip LED masa lambası.",
+      "price": 189,
+      "image": "https://www.perpaelektrik.com/idea/fl/09/myassets/products/227/led-masa-lambasi-50x45-cm-pl20057_min.jpg?revision=1697143329"
+    },
+    {
+      "id": "8",
+      "name": "Manyetik Kablo Seti",
+      "description": "USB-C, Lightning ve Micro girişli 3'ü 1 arada manyetik şarj kablosu.",
+      "price": 129.9,
+      "image": "https://www.teknostore.com/image/cache/data/resimler/rocoren-manyetik-kablo-duzenleyici-ve-tutucu-klips-seti-siyah-34661-682x682.jpg"
+    },
+    {
+      "id": "9",
+      "name": "Mini Masa Vantilatörü",
+      "description": "USB bağlantılı, sessiz çalışan mini masa vantilatörü.",
+      "price": 99.9,
+      "image": "https://cdn03.ciceksepeti.com/cicek/kcm75773598-1/L/byoztek-masa-ustu-mini-fan-vantilator-pembe-kcm75773598-1-9badbe46cb764bbdb88339601fae8014.jpg"
+    },
+    {
+      "id": "10",
+      "name": "Laptop Soğutucu Stand",
+      "description": "Ergonomik tasarımlı, çift fanlı dizüstü bilgisayar soğutucu.",
+      "price": 229,
+      "image": "https://www.segment.com.tr/images/productimages/RAMPAGE_AD_RC7_GMS_01.jpg"
+    },
+    {
+      "id": "11",
+      "name": "Kablosuz Kulaklık",
+      "description": "Gürültü engelleyici özellikli, şarj kutulu bluetooth kulaklık.",
+      "price": 349,
+      "image": "https://www.hepsisony.com/sony-wh-ch520-kablosuz-bluetooth-kulaklik-kulak-ustu-bluetooth-kulaklik-sony-6336-44-O.jpg"
+    },
+    {
+      "id": "12",
+      "name": "Akıllı Bileklik",
+      "description": "Adım sayar, nabız ölçer ve uyku takibi özellikli fitness bilekliği.",
+      "price": 279.9,
+      "image": "https://cdn2.a101.com.tr/dbmk89vnr/CALL/Image/getcl/livephotos/8/26008565DEFAULT/26008565DEFAULT_635.jpg"
+    },
+    {
+      "id": "13",
+      "name": "Kablolu Oyun Klavyesi",
+      "description": "RGB aydınlatmalı, mekanik hissiyatlı oyuncu klavyesi.",
+      "price": 199,
+      "image": "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/40735/uploads/urunresimleri/buyuk/tcherchi-premium-usb-kablolu-oyun-klav-1-bf80.jpg"
+    },
+    {
+      "id": "14",
+      "name": "Ofis Organizer Seti",
+      "description": "Kalemlik, notluk ve ataşlık içeren masaüstü organizer seti.",
+      "price": 89.9,
+      "image": "https://miast03.doracdn.com/mnresize/600/600/items/listing/26d760227ed0d8db8694c2cb3118a351-628f658dde5ce.png"
+    },
+    {
+      "id": "15",
+      "name": "Termoslu Seyahat Kupası",
+      "description": "Isıyı uzun süre koruyan paslanmaz çelik termos kupa.",
+      "price": 159,
+      "image": "https://img.kwcdn.com/product/Fancyalgo/VirtualModelMatting/63dc0b01b661cfcabfd1ba0450e07c2d.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp"
+    },
+    {
+      "id": "1",
+      "name": "Samsung Monitör",
+      "description": "Oyuncu Monitörü, Dikey olarak döndürebilme özelliği",
+      "price": 5000,
+      "image": "https://static.sinerji.gen.tr/Images/LG/NUN-ekran-goruntusu-2024-04-29-161746.jpg"
+    },
+    {
+      "id": "16",
+      "name": "Iphone 16 Pro Max",
+      "description": "İos 19, Kahverengi",
+      "price": 123,
+      "image": "https://www.apple.com/newsroom/images/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/article/Apple-iPhone-16-Pro-hero-geo-240909_inline.jpg.large.jpg"
+    },
+    {
+      "id": "17",
+      "name": "Çay Bardağı",
+      "description": "Sıcağa dayanıklı , ince belli çay bardağı",
+      "price": 100,
+      "image": "https://www.desentanitim.com/idea/ge/38/myassets/products/258/cay-ocagina-logolu-cay-bardagi_min.jpg?revision=1758972352"
+    },
+    {
+      "id": "18",
+      "name": "Iphone 16 Pro Max",
+      "description": "İos 19, Kahverengi",
+      "price": 123,
+      "image": "https://www.apple.com/newsroom/images/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/article/Apple-iPhone-16-Pro-hero-geo-240909_inline.jpg.large.jpg"
+    },
+    {
+      "id": "19",
+      "name": "Çay Bardağı",
+      "description": "Sıfır Araba On Numara",
+      "price": 123,
+      "image": "https://www.apple.com/newsroom/images/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/article/Apple-iPhone-16-Pro-hero-geo-240909_inline.jpg.large.jpg"
+    },
+    {
+      "id": "20",
+      "name": "Çay Bardağı",
+      "description": "İos 19, Kahverengi",
+      "price": 12,
+      "image": "https://static.sinerji.gen.tr/Images/LG/NUN-ekran-goruntusu-2024-04-29-161746.jpg"
+    },
+    {
+      "id": "21",
+      "name": "Iphone 16 Pro Max",
+      "description": "Güzel Bir Çay Bardağı",
+      "price": 122,
+      "image": "http://localhost:3001/products"
+    },
+    {
+      "id": "22",
+      "name": "Iphone 16 Pro Max",
+      "description": "İos 19, Kahverengi",
+      "price": 2500,
+      "image": "https://www.apple.com/newsroom/images/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/article/Apple-iPhone-16-Pro-hero-geo-240909_inline.jpg.large.jpg"
+    },
+    {
+      "id": "23",
+      "name": "Iphone 16 Pro Max",
+      "description": "Güzel Bir Çay Bardağı",
+      "price": 123,
+      "image": "https://static.sinerji.gen.tr/Images/LG/NUN-ekran-goruntusu-2024-04-29-161746.jpg"
+    },
+    {
+      "id": "24",
+      "name": "Iphone 16 Pro Max",
+      "description": "İos 19, Kahverengi",
+      "price": 1200,
+      "image": "https://static.sinerji.gen.tr/Images/LG/NUN-ekran-goruntusu-2024-04-29-161746.jpg"
+    },
+    {
+      "id": "25",
+      "name": "Çay Bardağı",
+      "description": "Güzel Bir Çay Bardağı",
+      "price": 1200,
+      "image": "https://cdn.akakce.com/_static/491759906/iphone-16-pro-max-siyah.jpg"
+    },
+    {
+      "id": "26",
+      "name": "Ayakkabı",
+      "description": "Oyuncu Monitörü, Dikey olarak döndürebilme özelliği",
+      "price": 500,
+      "image": "https://www.desentanitim.com/idea/ge/38/myassets/products/258/cay-ocagina-logolu-cay-bardagi_min.jpg?revision=1758972352"
+    },
+    {
+      "id": "27",
+      "name": "Çay Bardağı",
+      "description": "İos 19, Kahverengi",
+      "price": 1200,
+      "image": "https://cdn.akakce.com/_static/491759906/iphone-16-pro-max-siyah.jpg"
+    },
+    {
+      "id": "28",
+      "name": "Sarj Aleti",
+      "description": "Iphone Sarj Aleti",
+      "price": 1000,
+      "image": "https://productimages.hepsiburada.net/s/777/375-375/110000680015254.jpg"
+    }
   ],
   "users": [
     {
       "id": "1",
-      "firstName": "Gözde",
-      "lastName": "Zeytinli",
-      "username": "canzde",
-      "eposta": "canzde@gmail.com",
+      "firstName": "Efe",
+      "lastName": "Kırak",
+      "username": "efekirak",
+      "eposta": "efekirak@gmail.com",
       "age": "25",
       "gender": "male",
       "token": "mAtn9kZuiKUaMlu",
@@ -129,7 +220,7 @@
       "age": "25",
       "gender": "male",
       "token": "DCAPmIjGfkA1oHY",
-      "isAdmin": true,
+      "isAdmin": false,
       "password": "147852Aa",
       "passwordrepetition": "147852Aa"
     },
@@ -160,5 +251,4 @@
       "passwordrepetition": "123456Aa"
     }
   ]
- 
 }
