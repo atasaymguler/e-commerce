@@ -3,8 +3,9 @@ import RegisterPage from "../pages/registerPage/RegisterPage";
 import LoginPage from "../pages/loginPage/LoginPage";
 import HomePage from "../pages/HomePage";
 import AccountDetails from "../pages/AccountDetails/AccountDetails";
-import Products from "../pages/Products";
+
 import Privacy from "../pages/Privacy/Privacy";
+import ProductList from "../pages/Products/ProductList";
 
 export default function RouterConfig() {
   return (
@@ -13,7 +14,7 @@ export default function RouterConfig() {
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/home" element={<HomePage />}>
         <Route path="account-details" element={<AccountDetails />} />
-        <Route path="products" element={<Products />} />
+        <Route path="products" element={<ProductList />} />
         <Route path="privacy" element={<Privacy />} />
       </Route>
     </Routes>

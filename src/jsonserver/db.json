@@ -1,4 +1,111 @@
 {
+   "products": [
+    {
+      "id": 1,
+      "name": "Kahve Kupası",
+      "description": "Seramikten yapılmış, şık tasarımlı kahve kupası.",
+      "price": 79.99,
+      "image": "https://cdn03.ciceksepeti.com/cicek/kcm56682419-1/L/isme-ozel-kupa-bardak-bi-kahve-kcm56682419-1-3f6bba999b2a4133b866ef7dbf69e83e.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Kablosuz Mouse",
+      "description": "Ergonomik tasarıma sahip, sessiz tıklamalı kablosuz mouse.",
+      "price": 149.90,
+      "image": "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/125191099/125191099_0_MC/73019223.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Defter Seti",
+      "description": "3'lü çizgili defter seti. Okul ve ofis kullanımı için ideal.",
+      "price": 49.95,
+      "image": "https://files.bundesign.com/dosyalar/2022/03/yesil-defter-divit-kalem.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Bluetooth Hoparlör",
+      "description": "Taşınabilir, suya dayanıklı bluetooth hoparlör.",
+      "price": 299.00,
+      "image": "https://www.teknostore.com/image/cache/data/resimler/lecoo-rs19-rgb-aydinlatmali-bluetooth-stereo-10w-tasinabilir-hoparlor-siyah-25109-682x682.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Telefon Standı",
+      "description": "Ayarlanabilir açılı masaüstü telefon standı.",
+      "price": 39.90,
+      "image": "https://cdn-img.pttavm.com/pimages/592/314/198/638d95dc0c087.jpg?v=202402141157"
+    },
+    {
+      "id": 6,
+      "name": "Kahve Kupası",
+      "description": "Seramikten yapılmış, şık tasarımlı kahve kupası.",
+      "price": 79.99,
+      "image": "https://cdn03.ciceksepeti.com/cicek/kcm56682419-1/L/isme-ozel-kupa-bardak-bi-kahve-kcm56682419-1-3f6bba999b2a4133b866ef7dbf69e83e.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Kablosuz Mouse",
+      "description": "Ergonomik tasarıma sahip, sessiz tıklamalı kablosuz mouse.",
+      "price": 149.90,
+      "image": "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/125191099/125191099_0_MC/73019223.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Defter Seti",
+      "description": "3'lü çizgili defter seti. Okul ve ofis kullanımı için ideal.",
+      "price": 49.95,
+      "image": "https://files.bundesign.com/dosyalar/2022/03/yesil-defter-divit-kalem.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Bluetooth Hoparlör",
+      "description": "Taşınabilir, suya dayanıklı bluetooth hoparlör.",
+      "price": 299.00,
+      "image": "https://www.teknostore.com/image/cache/data/resimler/lecoo-rs19-rgb-aydinlatmali-bluetooth-stereo-10w-tasinabilir-hoparlor-siyah-25109-682x682.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Telefon Standı",
+      "description": "Ayarlanabilir açılı masaüstü telefon standı.",
+      "price": 39.90,
+      "image": "https://cdn-img.pttavm.com/pimages/592/314/198/638d95dc0c087.jpg?v=202402141157"
+    },
+    {
+      "id": 11,
+      "name": "Kahve Kupası",
+      "description": "Seramikten yapılmış, şık tasarımlı kahve kupası.",
+      "price": 79.99,
+      "image": "https://cdn03.ciceksepeti.com/cicek/kcm56682419-1/L/isme-ozel-kupa-bardak-bi-kahve-kcm56682419-1-3f6bba999b2a4133b866ef7dbf69e83e.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Kablosuz Mouse",
+      "description": "Ergonomik tasarıma sahip, sessiz tıklamalı kablosuz mouse.",
+      "price": 149.90,
+      "image": "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/125191099/125191099_0_MC/73019223.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Defter Seti",
+      "description": "3'lü çizgili defter seti. Okul ve ofis kullanımı için ideal.",
+      "price": 49.95,
+      "image": "https://files.bundesign.com/dosyalar/2022/03/yesil-defter-divit-kalem.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Bluetooth Hoparlör",
+      "description": "Taşınabilir, suya dayanıklı bluetooth hoparlör.",
+      "price": 299.00,
+      "image": "https://www.teknostore.com/image/cache/data/resimler/lecoo-rs19-rgb-aydinlatmali-bluetooth-stereo-10w-tasinabilir-hoparlor-siyah-25109-682x682.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Telefon Standı",
+      "description": "Ayarlanabilir açılı masaüstü telefon standı.",
+      "price": 39.90,
+      "image": "https://cdn-img.pttavm.com/pimages/592/314/198/638d95dc0c087.jpg?v=202402141157"
+    }
+  ],
   "users": [
     {
       "id": "1",
@@ -52,6 +159,6 @@
       "password": "123456Aa",
       "passwordrepetition": "123456Aa"
     }
-  ],
-  "products": []
+  ]
+ 
 }

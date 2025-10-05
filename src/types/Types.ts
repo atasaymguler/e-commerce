@@ -25,3 +25,12 @@ export interface ChangeInfoType{
     firstName? : string,
     lastName? : string
 }
+
+export interface ProductType{
+    id:number,
+    name:string,
+    description:string,
+    price:number,
+    image:string,
+    title:string
+}
