@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 import AppBar from '../components/AppBar'
 import { useEffect } from 'react';
 import type { RegisterUserType } from '../types/Types';
@@ -17,12 +17,16 @@ export default function HomePage() {
         }  
    
     },[])
+
   return (
     <>
   <div className='flex'>
+  
     <div className='w-1/6'><AppBar/></div>
     <div className='w-5/6 !py-4'> 
-    <Container maxWidth="xl">  <Outlet /> </Container>
+    <Container sx={{height:"100%"}} maxWidth="xl"> <div className='h-full' > 
+       <Outlet />
+        </div>  </Container>
    </div>
   </div>
  
