@@ -15,8 +15,9 @@ export default function ProductList() {
   let [products,setProducts] =  useState<ProductType[]>([])
    const [currentPage, setCurrentPage] = useState<number>(1);
   const [totalCount, setTotalCount] = useState<number>(0);
-  const itemsPerPage = 5;
+  const itemsPerPage = 8;
   const dispatch = useDispatch()
+  console.log(currentPage);
 
   const getAllProducts = async () =>{
     try {
@@ -37,9 +38,7 @@ export default function ProductList() {
   
   useEffect(()=>{
     getAllProducts()
-  },[])
-
-  useEffect
+  },[currentPage])
 
   const totalPages = Math.ceil(totalCount / itemsPerPage); // Toplam sayfa sayısını hesapla, ürün sayısı / sayfa başına ürün sayısı
 
@@ -53,7 +52,7 @@ export default function ProductList() {
   return (
     <div className="flex flex-col items-center gap-6 p-4">
     
-    <div className='flex justify-center items-center flex-wrap gap-3'>
+    <div className='flex justify-center items-center flex-wrap gap-5'>
       {
         products && products.map((product) =>(
           <Product  key={product.id} product={product} />
@@ -62,7 +61,7 @@ export default function ProductList() {
     </div>
      {/* MUI Pagination */}
       {totalPages >= 0 && (
-        <Box display="flex" justifyContent="center" mt={4}>
+        <Box display="flex" justifyContent="center" mt={2}>
   <Pagination
     count={totalPages}
     page={currentPage}

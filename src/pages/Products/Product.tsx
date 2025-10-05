@@ -17,7 +17,7 @@ export default function Product({product} : ProductPropsType) {
 
   return (
    <Card sx={{ width:300 }}>
-      <img src={image}  className='w-full h-[150px] object-scale-down' />
+      <img src={image}  className='w-full h-[120px] object-scale-down' />
       <CardContent sx={{height:"100px"}}>
         <Typography gutterBottom variant="h5" component="div">
          {name}
