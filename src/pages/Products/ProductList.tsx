@@ -54,7 +54,7 @@ export default function ProductList() {
   };
 
   return (
-    <div className="flex flex-col items-center gap-6 p-4">
+    <div className="flex flex-col items-center gap-3 p-4">
       <div className="flex justify-center items-center flex-wrap gap-5">
         {products &&
           products.map((product) => (
