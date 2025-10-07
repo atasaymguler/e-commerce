@@ -1,13 +1,6 @@
 {
   "products": [
     {
-      "id": "2",
-      "name": "Kablosuz Mouse",
-      "description": "Ergonomik tasarıma sahip, sessiz tıklamalı kablosuz mouse.",
-      "price": 149.9,
-      "image": "https://reimg-teknosa-cloud-prod.mncdn.com/mnresize/600/600/productimage/125191099/125191099_0_MC/73019223.jpg"
-    },
-    {
       "id": "3",
       "name": "Defter Seti",
       "description": "3'lü çizgili defter seti. Okul ve ofis kullanımı için ideal.",
@@ -141,13 +134,6 @@
       "image": "https://static.sinerji.gen.tr/Images/LG/NUN-ekran-goruntusu-2024-04-29-161746.jpg"
     },
     {
-      "id": "21",
-      "name": "Iphone 16 Pro Max",
-      "description": "Güzel Bir Çay Bardağı",
-      "price": 122,
-      "image": "http://localhost:3001/products"
-    },
-    {
       "id": "22",
       "name": "Iphone 16 Pro Max",
       "description": "İos 19, Kahverengi",
@@ -176,25 +162,11 @@
       "image": "https://cdn.akakce.com/_static/491759906/iphone-16-pro-max-siyah.jpg"
     },
     {
-      "id": "26",
-      "name": "Ayakkabı",
-      "description": "Oyuncu Monitörü, Dikey olarak döndürebilme özelliği",
-      "price": 500,
-      "image": "https://www.desentanitim.com/idea/ge/38/myassets/products/258/cay-ocagina-logolu-cay-bardagi_min.jpg?revision=1758972352"
-    },
-    {
       "id": "27",
       "name": "Çay Bardağı",
       "description": "İos 19, Kahverengi",
       "price": 1200,
       "image": "https://cdn.akakce.com/_static/491759906/iphone-16-pro-max-siyah.jpg"
-    },
-    {
-      "id": "28",
-      "name": "Sarj Aleti",
-      "description": "Iphone Sarj Aleti",
-      "price": 1000,
-      "image": "https://productimages.hepsiburada.net/s/777/375-375/110000680015254.jpg"
     }
   ],
   "users": [

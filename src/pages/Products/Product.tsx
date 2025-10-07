@@ -1,11 +1,16 @@
-import React from 'react'
+
 import type { ProductType } from '../../types/Types'
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
+import DeleteIcon from '@mui/icons-material/Delete';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import EditIcon from '@mui/icons-material/Edit';
+import { useDispatch, useSelector } from 'react-redux';
+import type { RootState } from '../../redux/store';
+import { setDeleteProductModal, setProductToBeDeleted } from '../../redux/slice/appSlice';
+import { useState } from 'react';
 
 type ProductPropsType = {
     product : ProductType
@@ -14,6 +19,13 @@ type ProductPropsType = {
 export default function Product({product} : ProductPropsType) {
 
     const {id,price,description,image,name} = product
+    const {user} = useSelector((state:RootState)=> state.app)
+
+    const dispatch = useDispatch()
+    const deleteProduct = () => {
+      dispatch(setDeleteProductModal(true))
+      dispatch(setProductToBeDeleted(product))
+    }
 
   return (
    <Card sx={{ width:300,boxShadow:"1px 2px 3px lightgrey" , transition: 'all 0.5s ease-in-out', "&:hover": { boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.2)' } }}>
@@ -26,9 +38,15 @@ export default function Product({product} : ProductPropsType) {
        {description}
         </Typography>
       </CardContent>
-      <CardActions sx={{marginTop:"5px",paddingTop:"0"}}>
+      <CardActions sx={{marginTop:"5px",paddingTop:"0",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
         <Button sx={{textTransform:"none",height:"60px"}} size="small">Ürün Detayına Git</Button>
-     
+        {
+         user?.isAdmin &&   <div>
+          <DeleteIcon onClick={deleteProduct} sx={{color:"#636e72" , "&:hover":{cursor:"pointer"}}} />
+          <EditIcon sx={{color:"#636e72", "&:hover":{cursor:"pointer"}}} />
+        </div>
+        }
+       
       </CardActions>
     </Card>
   )

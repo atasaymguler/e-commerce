@@ -7,6 +7,7 @@ import { useSelector } from 'react-redux';
 import type { RootState } from './redux/store';
 import MyModal from './components/MyModal';
 import AddProductModal from './components/AddProductModal';
+import DeleteProductModal from './components/DeleteProductModal';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
       <Spinner />
       <MyModal />
       <AddProductModal />
+      <DeleteProductModal />
     </div>
   )
 }

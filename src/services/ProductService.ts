@@ -30,6 +30,14 @@ class ProductService{
             .catch((error:any)=> reject(error))
         })
     }
+
+    deleteProduct(productId:string):Promise<ProductType>{
+        return new Promise((resolve:any,reject:any)=>{
+            axiosConfig.delete(`/products/${productId}`)
+            .then((response: AxiosResponse<any, any, {}>) => resolve(response))
+            .catch((error:any) => reject(error))
+        })
+    }
     
 }
 

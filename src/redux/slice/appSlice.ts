@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
-import type { RegisterUserType } from '../../types/Types'
+import type { ProductType, RegisterUserType } from '../../types/Types'
 
 export interface AppSliceType {
   backdrop: boolean,
@@ -8,6 +8,8 @@ export interface AppSliceType {
   modal : boolean,
   check : boolean,
   addProductModal : boolean,
+  deleteProductModal : boolean,
+  productToBeDeleted : ProductType
 
 }
 
@@ -17,7 +19,15 @@ const initialState: AppSliceType = {
   modal : false,
   check : true,
   addProductModal : false,
- 
+  deleteProductModal : false,
+  productToBeDeleted: {
+    id:"",
+    name:"",
+    price:0,
+    description:"",
+    image:""
+  }
+  
 }
 
 export const appSlice = createSlice({
@@ -32,11 +42,17 @@ export const appSlice = createSlice({
      state.check = action.payload
   },
   setAddProductModal : (state:AppSliceType , action:PayloadAction<boolean>) => {state.addProductModal = action.payload},
+  setDeleteProductModal : (state:AppSliceType , action:PayloadAction<boolean>) => {
+    state.deleteProductModal = action.payload
+  },
+  setProductToBeDeleted : (state:AppSliceType,action:PayloadAction<ProductType>) => {
+    state.productToBeDeleted = action.payload
+  }
    
     },
    
 })
 
-export const { openBackdrop , closeBackdrop,setUser,setModal,setCheck,setAddProductModal } = appSlice.actions
+export const { openBackdrop , closeBackdrop,setUser,setModal,setCheck,setAddProductModal ,setDeleteProductModal,setProductToBeDeleted } = appSlice.actions
 
 export default appSlice.reducer
