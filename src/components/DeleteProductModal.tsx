@@ -7,6 +7,7 @@ import {
   closeBackdrop,
   openBackdrop,
   setDeleteProductModal,
+  setProductToBeDeleted,
 } from "../redux/slice/appSlice";
 import { useState } from "react";
 import { toast } from "react-toastify";
@@ -53,9 +54,9 @@ export default function DeleteProductModal() {
           setTimeout(() => {
             dispatch1(getProductByPage({ currentPage: page, itemsPerPage: 8 }));
           }, 100);
-      
           closeDeleteProductModal()
           setPassword('')
+          dispatch(setProductToBeDeleted({id:"",name:"",price:0,description:"",image:""}))
         }
       } catch (error: any) {
         toast.error(`Ürün Silinrken Hata Oluştu ${error.message}`);

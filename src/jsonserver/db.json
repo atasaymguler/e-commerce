@@ -160,13 +160,6 @@
       "description": "Güzel Bir Çay Bardağı",
       "price": 1200,
       "image": "https://cdn.akakce.com/_static/491759906/iphone-16-pro-max-siyah.jpg"
-    },
-    {
-      "id": "27",
-      "name": "Çay Bardağı",
-      "description": "İos 19, Kahverengi",
-      "price": 1200,
-      "image": "https://cdn.akakce.com/_static/491759906/iphone-16-pro-max-siyah.jpg"
     }
   ],
   "users": [
