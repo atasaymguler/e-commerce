@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
 import { useDispatch, useSelector } from 'react-redux';
 import type { RootState } from '../redux/store';
-import { closeBackdrop, openBackdrop, setUpdateProductModal } from '../redux/slice/appSlice';
+import { closeBackdrop, openBackdrop, setProductToBeUpdated, setUpdateProductModal } from '../redux/slice/appSlice';
 import { useFormik } from 'formik';
 import { addProductSchema } from '../schema/AddProductSchema';
 import { TextField } from '@mui/material';
@@ -46,13 +46,14 @@ export default function UpdateProductModal() {
       }
       try {
         dispatch(openBackdrop())
-        let response = await productService.updatedProduct(updatedProduct)
+        let response : ProductType = await productService.updatedProduct(updatedProduct)
         if(response){
           toast.success("Ürün Başarıyla Güncellendi")
-          let page = getPage()
+          let page : number = getPage()
            setTimeout(()=>{
                            dispatch1(getProductByPage({currentPage:page,itemsPerPage:8}))
                           },100)
+                           dispatch(setProductToBeUpdated({id:"",name:"",price:0,description:"",image:""}))
                           dispatch(setUpdateProductModal(false))
         }
       } catch (error:any) {

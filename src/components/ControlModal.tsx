@@ -3,8 +3,9 @@ import Modal from "@mui/material/Modal";
 import { useDispatch, useSelector } from "react-redux";
 import type { AppDispatch, RootState } from "../redux/store";
 import { Button, TextField } from "@mui/material";
-import { setControlModal, setUpdateProductModal} from "../redux/slice/appSlice";
+import { setControlModal, setDeleteProductModal, setUpdateProductModal} from "../redux/slice/appSlice";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 const style = {
   position: "absolute",
@@ -38,6 +39,16 @@ export default function ControlModal() {
           closeControlModal()
           dispatch(setUpdateProductModal(true))
         }
+        else if(controlModal.actionType === "delete"){
+            closeControlModal()
+          dispatch(setDeleteProductModal(true))
+        }
+    }
+    else {
+      toast.error("Şifre Yanlış")
+      dispatch(setControlModal({open:false,actionType:""}))
+      setPassword("")
+      
     }
   }
   
