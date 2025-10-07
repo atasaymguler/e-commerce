@@ -40,3 +40,7 @@ export interface AddProductType{
     price:number,
     image:string,
 }
+export interface ControlModal{
+    open : boolean,
+    actionType : string
+}

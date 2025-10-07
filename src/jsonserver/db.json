@@ -1,29 +1,22 @@
 {
   "products": [
     {
-      "id": "3",
-      "name": "Defter Seti",
-      "description": "3'lü çizgili defter seti. Okul ve ofis kullanımı için ideal.",
-      "price": 49.95,
-      "image": "https://files.bundesign.com/dosyalar/2022/03/yesil-defter-divit-kalem.jpg"
-    },
-    {
       "id": "4",
-      "name": "Bluetooth Hoparlör",
-      "description": "Taşınabilir, suya dayanıklı bluetooth hoparlör.",
-      "price": 299,
+      "name": "Yeni Nesil Kulaklık",
+      "description": "Suya dayanıklı bluetooth hoparlör.",
+      "price": 350,
       "image": "https://www.teknostore.com/image/cache/data/resimler/lecoo-rs19-rgb-aydinlatmali-bluetooth-stereo-10w-tasinabilir-hoparlor-siyah-25109-682x682.jpg"
     },
     {
       "id": "5",
-      "name": "Telefon Standı",
-      "description": "Ayarlanabilir açılı masaüstü telefon standı.",
-      "price": 39.9,
+      "name": "Stand Telefon",
+      "description": "Ayarlanabilir açılı masaüstü",
+      "price": 45,
       "image": "https://cdn-img.pttavm.com/pimages/592/314/198/638d95dc0c087.jpg?v=202402141157"
     },
     {
       "id": "6",
-      "name": "Akıllı Su Şişesi",
+      "name": "Akılsız Şişe",
       "description": "Sıcaklık göstergeli, paslanmaz çelik akıllı su şişesi.",
       "price": 249.9,
       "image": "https://www.monofe.com/userfiles/urunler//480x480/96297_Hidrate_Spark_PRO_2_Akilli_Su_Sisesi_946mLStraw_1750169482_13.jpg"
@@ -142,24 +135,17 @@
     },
     {
       "id": "23",
-      "name": "Iphone 16 Pro Max",
-      "description": "Güzel Bir Çay Bardağı",
-      "price": 123,
+      "name": "Samsung Monitör",
+      "description": "Oyuncu Monitörü",
+      "price": 6500,
       "image": "https://static.sinerji.gen.tr/Images/LG/NUN-ekran-goruntusu-2024-04-29-161746.jpg"
     },
     {
       "id": "24",
       "name": "Iphone 16 Pro Max",
-      "description": "İos 19, Kahverengi",
+      "description": "Kötü sadasdwqaeaw",
       "price": 1200,
       "image": "https://static.sinerji.gen.tr/Images/LG/NUN-ekran-goruntusu-2024-04-29-161746.jpg"
-    },
-    {
-      "id": "25",
-      "name": "Çay Bardağı",
-      "description": "Güzel Bir Çay Bardağı",
-      "price": 1200,
-      "image": "https://cdn.akakce.com/_static/491759906/iphone-16-pro-max-siyah.jpg"
     }
   ],
   "users": [

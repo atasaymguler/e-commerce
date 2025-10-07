@@ -8,6 +8,8 @@ import type { RootState } from './redux/store';
 import MyModal from './components/MyModal';
 import AddProductModal from './components/AddProductModal';
 import DeleteProductModal from './components/DeleteProductModal';
+import ControlModal from './components/ControlModal';
+import UpdateProductModal from './components/UpdateProductModal';
 
 function App() {
 
@@ -22,8 +24,10 @@ function App() {
       <ToastContainer position='bottom-right' autoClose={2000} />
       <Spinner />
       <MyModal />
+      <ControlModal />
       <AddProductModal />
       <DeleteProductModal />
+      <UpdateProductModal />
     </div>
   )
 }

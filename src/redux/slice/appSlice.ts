@@ -1,16 +1,19 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
-import type { ProductType, RegisterUserType } from '../../types/Types'
+import type { ControlModal, ProductType, RegisterUserType } from '../../types/Types'
 
 export interface AppSliceType {
   backdrop: boolean,
   user: RegisterUserType | null,
   modal : boolean,
   check : boolean,
+  actionType : string,
   addProductModal : boolean,
   deleteProductModal : boolean,
-  productToBeDeleted : ProductType
-
+  controlModal : ControlModal,
+  // productToBeDeleted : ProductType,
+  theProductToBeProcessed : ProductType,
+  updateProductModal : boolean
 }
 
 const initialState: AppSliceType = {
@@ -18,9 +21,22 @@ const initialState: AppSliceType = {
   user : null,
   modal : false,
   check : true,
+  actionType : "",
   addProductModal : false,
   deleteProductModal : false,
-  productToBeDeleted: {
+  // productToBeDeleted: {
+  //   id:"",
+  //   name:"",
+  //   price:0,
+  //   description:"",
+  //   image:""
+  // },
+  updateProductModal : false,
+  controlModal : {
+    open : false,
+    actionType : ""
+  },
+  theProductToBeProcessed :  {
     id:"",
     name:"",
     price:0,
@@ -46,13 +62,22 @@ export const appSlice = createSlice({
     state.deleteProductModal = action.payload
   },
   setProductToBeDeleted : (state:AppSliceType,action:PayloadAction<ProductType>) => {
-    state.productToBeDeleted = action.payload
-  }
-   
+    state.theProductToBeProcessed = action.payload
+  },
+  setControlModal : (state:AppSliceType,action : PayloadAction<ControlModal>) => {
+    state.controlModal = action.payload
+  },
+   setProductToBeUpdated : (state:AppSliceType,action:PayloadAction<ProductType>) => {
+    state.theProductToBeProcessed = action.payload
+  },
+   setUpdateProductModal : (state:AppSliceType , action:PayloadAction<boolean>) => {
+    state.updateProductModal = action.payload
+  },
+  
     },
    
 })
 
-export const { openBackdrop , closeBackdrop,setUser,setModal,setCheck,setAddProductModal ,setDeleteProductModal,setProductToBeDeleted } = appSlice.actions
+export const { openBackdrop , closeBackdrop,setUser,setModal,setCheck,setAddProductModal ,setDeleteProductModal,setProductToBeDeleted ,setControlModal ,setProductToBeUpdated,setUpdateProductModal } = appSlice.actions
 
 export default appSlice.reducer

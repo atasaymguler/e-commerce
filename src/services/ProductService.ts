@@ -38,6 +38,13 @@ class ProductService{
             .catch((error:any) => reject(error))
         })
     }
+    updatedProduct(updatedProduct:ProductType){
+        return new Promise((resolve:any,reject:any)=>{
+            axiosConfig.put(`products/${updatedProduct.id}`,updatedProduct)
+            .then((response:AxiosResponse<any, any, {}>)=> resolve(response))
+            .catch((error:any)=> reject(error))
+        })
+    }
     
 }
 

@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import { useDispatch, useSelector } from "react-redux";
-import type { RootState } from "../redux/store";
+import type { AppDispatch, RootState } from "../redux/store";
 import { Button, TextField } from "@mui/material";
 import {
   closeBackdrop,
@@ -32,12 +32,12 @@ export default function DeleteProductModal() {
   const { page } = useSelector((state: RootState) => state.product);
 
   const dispatch = useDispatch();
-  const dispatch1 = useAppDispatch();
+  const dispatch1 = useDispatch<AppDispatch>();
 
   const closeDeleteProductModal = () => {
     dispatch(setDeleteProductModal(false));
   };
-  const { user, productToBeDeleted } = useSelector(
+  const { user, theProductToBeProcessed } = useSelector(
     (state: RootState) => state.app
   );
   const [password, setPassword] = useState<string>('');
@@ -47,7 +47,7 @@ export default function DeleteProductModal() {
       try {
         dispatch(openBackdrop());
         let response = await productService.deleteProduct(
-          productToBeDeleted.id
+          theProductToBeProcessed.id
         );
         if (response) {
           toast.success("Ürün başarıyla silindi");

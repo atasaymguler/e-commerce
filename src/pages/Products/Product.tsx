@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 import EditIcon from '@mui/icons-material/Edit';
 import { useDispatch, useSelector } from 'react-redux';
 import type { RootState } from '../../redux/store';
-import { setDeleteProductModal, setProductToBeDeleted } from '../../redux/slice/appSlice';
+import { setControlModal, setDeleteProductModal, setProductToBeDeleted, setProductToBeUpdated, setUpdateProductModal } from '../../redux/slice/appSlice';
 import { useState } from 'react';
 
 type ProductPropsType = {
@@ -25,6 +25,11 @@ export default function Product({product} : ProductPropsType) {
     const deleteProduct = () => {
       dispatch(setDeleteProductModal(true))
       dispatch(setProductToBeDeleted(product))
+    }
+    const updateProduct = () => {
+       dispatch(setProductToBeUpdated(product))
+      dispatch(setControlModal({open:true,actionType:"update"}))
+     
     }
 
   return (
@@ -43,7 +48,7 @@ export default function Product({product} : ProductPropsType) {
         {
          user?.isAdmin &&   <div>
           <DeleteIcon onClick={deleteProduct} sx={{color:"#636e72" , "&:hover":{cursor:"pointer"}}} />
-          <EditIcon sx={{color:"#636e72", "&:hover":{cursor:"pointer"}}} />
+          <EditIcon onClick={updateProduct} sx={{color:"#636e72", "&:hover":{cursor:"pointer"}}} />
         </div>
         }
        

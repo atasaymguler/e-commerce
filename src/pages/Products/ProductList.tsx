@@ -10,11 +10,13 @@ import { Box, Pagination } from "@mui/material";
 import type { AppDispatch, RootState } from "../../redux/store";
 import { getProductByPage } from "../../redux/slice/productSlice";
 import { useAppDispatch, useAppSelector } from "./hooks";
+import { getPage } from "../../functions/getPage";
 
 export default function ProductList() {
-  const { products, productCount,page } = useAppSelector(
+  const { products, productCount } = useAppSelector(
     (state: RootState) => state.product
   );
+  let page = getPage()
   const [currentPage, setCurrentPage] = useState<number>(page);
 
   const itemsPerPage = 8;
