@@ -9,8 +9,9 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { toast } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { setAddProductModal, setUser } from "../redux/slice/appSlice";
+import { setAddProductModal,  setUser } from "../redux/slice/appSlice";
 import type { RootState } from "../redux/store";
+import { setBasketDrawer } from "../redux/slice/productSlice";
 
 export default function AppBar() {
   const { user } = useSelector((state: RootState) => state.app);
@@ -59,8 +60,9 @@ export default function AppBar() {
             color="inherit"
             variant="text"
             sx={{ textTransform: "none" }}
-            component={Link}
-            to="/home/basket"
+            // component={Link}
+            // to="/home/basket"
+            onClick={()=> dispatch(setBasketDrawer(true))}
           >
             <ShoppingBasketIcon />
             <span className="!mx-5 text-[#fff]">Sepetim</span>

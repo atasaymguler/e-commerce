@@ -11,15 +11,12 @@ import DeleteProductModal from './components/DeleteProductModal';
 import ControlModal from './components/ControlModal';
 import UpdateProductModal from './components/UpdateProductModal';
 import { useEffect } from 'react';
+import BasketDetails from './components/BasketDetails';
 
 function App() {
 
   const {user} = useSelector((state:RootState)=> state.app)
 
-  useEffect(()=>{
-
-  },[])
- 
   return (
   <div >
      <>
@@ -33,6 +30,7 @@ function App() {
       <AddProductModal />
       <DeleteProductModal />
       <UpdateProductModal />
+      <BasketDetails />
     </div>
   )
 }

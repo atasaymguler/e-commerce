@@ -11,9 +11,9 @@ export interface AppSliceType {
   addProductModal : boolean,
   deleteProductModal : boolean,
   controlModal : ControlModal,
-  // productToBeDeleted : ProductType,
   theProductToBeProcessed : ProductType,
-  updateProductModal : boolean
+  updateProductModal : boolean,
+ 
 }
 
 const initialState: AppSliceType = {
@@ -24,13 +24,6 @@ const initialState: AppSliceType = {
   actionType : "",
   addProductModal : false,
   deleteProductModal : false,
-  // productToBeDeleted: {
-  //   id:"",
-  //   name:"",
-  //   price:0,
-  //   description:"",
-  //   image:""
-  // },
   updateProductModal : false,
   controlModal : {
     open : false,
@@ -42,8 +35,8 @@ const initialState: AppSliceType = {
     price:0,
     description:"",
     image:""
-  }
-  
+  },
+ 
 }
 
 export const appSlice = createSlice({
@@ -73,6 +66,7 @@ export const appSlice = createSlice({
    setUpdateProductModal : (state:AppSliceType , action:PayloadAction<boolean>) => {
     state.updateProductModal = action.payload
   },
+ 
   
     },
    

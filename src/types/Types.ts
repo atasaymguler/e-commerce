@@ -44,3 +44,11 @@ export interface ControlModal{
     open : boolean,
     actionType : string
 }
+export interface SelectedProduct{
+     id:string,
+    name:string,
+    description:string,
+    price:number,
+    image:string,
+    count: number
+}

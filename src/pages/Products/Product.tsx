@@ -41,10 +41,10 @@ export default function Product({product} : ProductPropsType) {
       <img src={image}  className='w-full h-[100px] object-scale-down' />
       <CardContent sx={{height:"100px" ,}}>
         <Typography gutterBottom variant="h6" component="div">
-         {name}
+         {name.substring(0,40)}...
         </Typography>
         <Typography  variant="body2" sx={{  color: 'text.secondary',height:"100px" }}>
-       {description}
+       {description.substring(0,70)}...
         </Typography>
       </CardContent>
       <CardActions sx={{marginTop:"5px",paddingTop:"0",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
