@@ -38,10 +38,17 @@ class ProductService{
             .catch((error:any) => reject(error))
         })
     }
-    updatedProduct(updatedProduct:ProductType){
+    updatedProduct(updatedProduct:ProductType):Promise<ProductType>{
         return new Promise((resolve:any,reject:any)=>{
             axiosConfig.put(`products/${updatedProduct.id}`,updatedProduct)
             .then((response:AxiosResponse<any, any, {}>)=> resolve(response))
+            .catch((error:any)=> reject(error))
+        })
+    }
+    getProductById(productId:string):Promise<ProductType>{
+        return new Promise((resolve:any,reject:any)=>{
+            axiosConfig.get(`/products/${productId}`)
+            .then((response:AxiosResponse<any, any, {}>)=> resolve(response.data))
             .catch((error:any)=> reject(error))
         })
     }

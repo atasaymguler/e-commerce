@@ -2,7 +2,7 @@
   "products": [
     {
       "id": "4",
-      "name": "Yeni Nesil Kulaklık",
+      "name": "Kötüa",
       "description": "Suya dayanıklı bluetooth hoparlör.",
       "price": 350,
       "image": "https://www.teknostore.com/image/cache/data/resimler/lecoo-rs19-rgb-aydinlatmali-bluetooth-stereo-10w-tasinabilir-hoparlor-siyah-25109-682x682.jpg"
@@ -65,7 +65,7 @@
     },
     {
       "id": "13",
-      "name": "Kablolu Oyun Klavyesi",
+      "name": "Kablosuz Oyun Klavyesi",
       "description": "RGB aydınlatmalı, mekanik hissiyatlı oyuncu klavyesi.",
       "price": 199,
       "image": "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/40735/uploads/urunresimleri/buyuk/tcherchi-premium-usb-kablolu-oyun-klav-1-bf80.jpg"
@@ -113,13 +113,6 @@
       "image": "https://www.apple.com/newsroom/images/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/article/Apple-iPhone-16-Pro-hero-geo-240909_inline.jpg.large.jpg"
     },
     {
-      "id": "19",
-      "name": "Çay Bardağı",
-      "description": "Sıfır Araba On Numara",
-      "price": 123,
-      "image": "https://www.apple.com/newsroom/images/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/article/Apple-iPhone-16-Pro-hero-geo-240909_inline.jpg.large.jpg"
-    },
-    {
       "id": "20",
       "name": "Çay Bardağı",
       "description": "İos 19, Kahverengi",
@@ -138,13 +131,6 @@
       "name": "Samsung Monitör",
       "description": "Oyuncu Monitörü",
       "price": 6500,
-      "image": "https://static.sinerji.gen.tr/Images/LG/NUN-ekran-goruntusu-2024-04-29-161746.jpg"
-    },
-    {
-      "id": "24",
-      "name": "Iphone 16 Pro Max",
-      "description": "Kötü sadasdwqaeaw",
-      "price": 1200,
       "image": "https://static.sinerji.gen.tr/Images/LG/NUN-ekran-goruntusu-2024-04-29-161746.jpg"
     }
   ],

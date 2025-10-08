@@ -10,10 +10,15 @@ import AddProductModal from './components/AddProductModal';
 import DeleteProductModal from './components/DeleteProductModal';
 import ControlModal from './components/ControlModal';
 import UpdateProductModal from './components/UpdateProductModal';
+import { useEffect } from 'react';
 
 function App() {
 
   const {user} = useSelector((state:RootState)=> state.app)
+
+  useEffect(()=>{
+
+  },[])
  
   return (
   <div >

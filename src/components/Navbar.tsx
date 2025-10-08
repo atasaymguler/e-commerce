@@ -20,6 +20,7 @@ export default function Navbar() {
     const logout = () => {
         toast.success("Çıkış Yapıldı")
         localStorage.removeItem("user")
+         localStorage.removeItem("currentPage")
         dispatch(setUser(null))
         navigate("/")
     }

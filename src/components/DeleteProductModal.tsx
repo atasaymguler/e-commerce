@@ -14,6 +14,7 @@ import { toast } from "react-toastify";
 import productService from "../services/ProductService";
 import { getProductByPage } from "../redux/slice/productSlice";
 import { useAppDispatch } from "../pages/Products/hooks";
+import { getPage } from "../functions/getPage";
 
 const style = {
   position: "absolute",
@@ -29,7 +30,6 @@ const style = {
 
 export default function DeleteProductModal() {
   const { deleteProductModal } = useSelector((state: RootState) => state.app);
-  const { page } = useSelector((state: RootState) => state.product);
 
   const dispatch = useDispatch();
   const dispatch1 = useDispatch<AppDispatch>();
@@ -37,13 +37,12 @@ export default function DeleteProductModal() {
   const closeDeleteProductModal = () => {
     dispatch(setDeleteProductModal(false));
   };
-  const { user, theProductToBeProcessed } = useSelector(
+  const {  theProductToBeProcessed } = useSelector(
     (state: RootState) => state.app
   );
-  const [password, setPassword] = useState<string>('');
+ 
   const deleteProduct = async () => {
-    if (password === user?.password) {
-      // Siliecek Ürün
+  
       try {
         dispatch(openBackdrop());
         let response = await productService.deleteProduct(
@@ -51,50 +50,48 @@ export default function DeleteProductModal() {
         );
         if (response) {
           toast.success("Ürün başarıyla silindi");
+          let page : number = getPage()
           setTimeout(() => {
             dispatch1(getProductByPage({ currentPage: page, itemsPerPage: 8 }));
           }, 100);
           closeDeleteProductModal()
-          setPassword('')
           dispatch(setProductToBeDeleted({id:"",name:"",price:0,description:"",image:""}))
+
         }
       } catch (error: any) {
         toast.error(`Ürün Silinrken Hata Oluştu ${error.message}`);
       } finally {
         dispatch(closeBackdrop());
       }
-    } else {
-      toast.error("Şifre yanlış");
-    }
+   
   };
-
+ 
   return (
     <div>
       <Modal open={deleteProductModal} onClose={closeDeleteProductModal}>
         <Box sx={style}>
           <h1 className="text-2xl !mb-2 text-center">Ürün Silme</h1>
           <p className="text-center">
-            Ürünü Silmek için lütfen şifrenizi giriniz.
+            Ürünü silmek istediğinize emin misiniz ? 
           </p>
-          <div className="!mt-2">
-            <TextField
-              value={password}
-              onChange={(
-                e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-              ) => setPassword(e.target.value)}
-              size="small"
-              sx={{ width: "100%" }}
-              type="password"
-            />
-          </div>
-          <div className="flex justify-center items-center !mt-2">
+
+          <div className="flex justify-center items-center !mt-4 gap-5">
             <Button
               onClick={deleteProduct}
               sx={{ textTransform: "none" }}
               size="small"
               variant="contained"
+              color="error"
             >
               Sil
+            </Button>
+             <Button
+              onClick={closeDeleteProductModal}
+              sx={{ textTransform: "none" }}
+              size="small"
+              variant="contained"
+            >
+              İptal
             </Button>
           </div>
         </Box>

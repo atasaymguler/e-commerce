@@ -18,7 +18,7 @@ export interface AppSliceType {
 
 const initialState: AppSliceType = {
   backdrop: false,
-  user : null,
+  user : JSON.parse(localStorage.getItem("user") as string)  || null,
   modal : false,
   check : true,
   actionType : "",
