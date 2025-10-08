@@ -37,42 +37,47 @@ export default function DeleteProductModal() {
   const closeDeleteProductModal = () => {
     dispatch(setDeleteProductModal(false));
   };
-  const {  theProductToBeProcessed } = useSelector(
+  const { theProductToBeProcessed } = useSelector(
     (state: RootState) => state.app
   );
- 
-  const deleteProduct = async () => {
-  
-      try {
-        dispatch(openBackdrop());
-        let response = await productService.deleteProduct(
-          theProductToBeProcessed.id
-        );
-        if (response) {
-          toast.success("Ürün başarıyla silindi");
-          let page : number = getPage()
-          setTimeout(() => {
-            dispatch1(getProductByPage({ currentPage: page, itemsPerPage: 8 }));
-          }, 100);
-          closeDeleteProductModal()
-          dispatch(setProductToBeDeleted({id:"",name:"",price:0,description:"",image:""}))
 
-        }
-      } catch (error: any) {
-        toast.error(`Ürün Silinrken Hata Oluştu ${error.message}`);
-      } finally {
-        dispatch(closeBackdrop());
+  const deleteProduct = async () => {
+    try {
+      dispatch(openBackdrop());
+      let response = await productService.deleteProduct(
+        theProductToBeProcessed.id
+      );
+      if (response) {
+        toast.success("Ürün başarıyla silindi");
+        let page: number = getPage();
+        setTimeout(() => {
+          dispatch1(getProductByPage({ currentPage: page, itemsPerPage: 8 }));
+        }, 100);
+        closeDeleteProductModal();
+        dispatch(
+          setProductToBeDeleted({
+            id: "",
+            name: "",
+            price: 0,
+            description: "",
+            image: "",
+          })
+        );
       }
-   
+    } catch (error: any) {
+      toast.error(`Ürün Silinrken Hata Oluştu ${error.message}`);
+    } finally {
+      dispatch(closeBackdrop());
+    }
   };
- 
+
   return (
     <div>
       <Modal open={deleteProductModal} onClose={closeDeleteProductModal}>
         <Box sx={style}>
           <h1 className="text-2xl !mb-2 text-center">Ürün Silme</h1>
           <p className="text-center">
-            Ürünü silmek istediğinize emin misiniz ? 
+            Ürünü silmek istediğinize emin misiniz ?
           </p>
 
           <div className="flex justify-center items-center !mt-4 gap-5">
@@ -85,7 +90,7 @@ export default function DeleteProductModal() {
             >
               Sil
             </Button>
-             <Button
+            <Button
               onClick={closeDeleteProductModal}
               sx={{ textTransform: "none" }}
               size="small"

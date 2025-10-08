@@ -144,7 +144,11 @@ export const appSlice = createSlice({
       state.selectedProducts.map((product:SelectedProduct)=>{
         state.calculetBasket += product.count * product.price
       })
+    },
+    resetsTheBasket : (state:ProductSliceType) => {
+      state.selectedProducts = []
     }
+
   },
   extraReducers: (builder: ActionReducerMapBuilder<ProductSliceType>) => {
     builder.addCase(getProductByPage.fulfilled, (state, action) => {
@@ -159,7 +163,8 @@ export const {
   setSelectedProducts,
   plusSelectedProduct,
   minusSelectedProduct,
-  setCalculetBasket
+  setCalculetBasket,
+  resetsTheBasket
 } = appSlice.actions;
 
 export default appSlice.reducer;

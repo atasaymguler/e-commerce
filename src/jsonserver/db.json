@@ -186,15 +186,178 @@
       "isAdmin": false,
       "password": "123456Aa",
       "passwordrepetition": "123456Aa"
+    },
+    {
+      "firstName": "mücahit",
+      "lastName": "karakuş",
+      "username": "muco123",
+      "eposta": "muco@amcik.com",
+      "password": "123123Aa.",
+      "passwordrepetition": "123123Aa.",
+      "age": "23",
+      "gender": "female",
+      "isAdmin": true,
+      "token": "HvfHYXmSdi6qJqY",
+      "id": "5"
     }
   ],
-  "card":[
+  "card": [
     {
       "id": "1",
-      "cardOwner" : "Efe Kırak",
-      "cardNumber" : "1111111111111111",
-      "cardCv" : "111",
-      "cardExpirationDate" : "11/11"
+      "cardOwner": "Efe Kırak",
+      "cardNumber": "1111111111111111",
+      "cardCv": "111",
+      "cardExpirationDate": "11/11"
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "userId": "1",
+      "items": [
+        {
+          "productId": 3,
+          "name": "Klavye",
+          "price": 500,
+          "quantity": 1
+        },
+        {
+          "productId": 4,
+          "name": "Mouse",
+          "price": 250,
+          "quantity": 2
+        }
+      ],
+      "total": 1000,
+      "date": "2025-10-09T12:30:00Z"
+    },
+    {
+      "id": "2",
+      "userId": "1",
+      "items": [
+        {
+          "id": "4",
+          "name": "Bluetooth Hoparlör",
+          "description": "Suya dayanıklı bluetooth hoparlör. Paslanmaz , yıpranmaz , 5 yıl garantili hoparlör",
+          "price": 350,
+          "image": "https://www.teknostore.com/image/cache/data/resimler/lecoo-rs19-rgb-aydinlatmali-bluetooth-stereo-10w-tasinabilir-hoparlor-siyah-25109-682x682.jpg",
+          "count": 1
+        },
+        {
+          "id": "5",
+          "name": "Stand Telefon",
+          "description": "Ayarlanabilir açılı masaüstü",
+          "price": 45,
+          "image": "https://cdn-img.pttavm.com/pimages/592/314/198/638d95dc0c087.jpg?v=202402141157",
+          "count": 2
+        },
+        {
+          "id": "6",
+          "name": "Akılsız Şişe",
+          "description": "Sıcaklık göstergeli, paslanmaz çelik akıllı su şişesi.",
+          "price": 249.9,
+          "image": "https://www.monofe.com/userfiles/urunler//480x480/96297_Hidrate_Spark_PRO_2_Akilli_Su_Sisesi_946mLStraw_1750169482_13.jpg",
+          "count": 2
+        },
+        {
+          "id": "7",
+          "name": "LED Masa Lambası",
+          "description": "Dokunmatik kontrollü, 3 kademeli parlaklığa sahip LED masa lambası.",
+          "price": 189,
+          "image": "https://www.perpaelektrik.com/idea/fl/09/myassets/products/227/led-masa-lambasi-50x45-cm-pl20057_min.jpg?revision=1697143329",
+          "count": 2
+        }
+      ],
+      "total": 1317.8,
+      "date": "09.10.2025 01:48:08"
+    },
+    {
+      "id": "3",
+      "userId": "1",
+      "items": [
+        {
+          "id": "4",
+          "name": "Bluetooth Hoparlör",
+          "description": "Suya dayanıklı bluetooth hoparlör. Paslanmaz , yıpranmaz , 5 yıl garantili hoparlör",
+          "price": 350,
+          "image": "https://www.teknostore.com/image/cache/data/resimler/lecoo-rs19-rgb-aydinlatmali-bluetooth-stereo-10w-tasinabilir-hoparlor-siyah-25109-682x682.jpg",
+          "count": 1
+        },
+        {
+          "id": "5",
+          "name": "Stand Telefon",
+          "description": "Ayarlanabilir açılı masaüstü",
+          "price": 45,
+          "image": "https://cdn-img.pttavm.com/pimages/592/314/198/638d95dc0c087.jpg?v=202402141157",
+          "count": 2
+        },
+        {
+          "id": "6",
+          "name": "Akılsız Şişe",
+          "description": "Sıcaklık göstergeli, paslanmaz çelik akıllı su şişesi.",
+          "price": 249.9,
+          "image": "https://www.monofe.com/userfiles/urunler//480x480/96297_Hidrate_Spark_PRO_2_Akilli_Su_Sisesi_946mLStraw_1750169482_13.jpg",
+          "count": 2
+        },
+        {
+          "id": "7",
+          "name": "LED Masa Lambası",
+          "description": "Dokunmatik kontrollü, 3 kademeli parlaklığa sahip LED masa lambası.",
+          "price": 189,
+          "image": "https://www.perpaelektrik.com/idea/fl/09/myassets/products/227/led-masa-lambasi-50x45-cm-pl20057_min.jpg?revision=1697143329",
+          "count": 2
+        }
+      ],
+      "total": 1317.8,
+      "date": "09.10.2025 01:52:29"
+    },
+    {
+      "id": "4",
+      "userId": "1",
+      "items": [
+        {
+          "id": "4",
+          "name": "Bluetooth Hoparlör",
+          "description": "Suya dayanıklı bluetooth hoparlör. Paslanmaz , yıpranmaz , 5 yıl garantili hoparlör",
+          "price": 350,
+          "image": "https://www.teknostore.com/image/cache/data/resimler/lecoo-rs19-rgb-aydinlatmali-bluetooth-stereo-10w-tasinabilir-hoparlor-siyah-25109-682x682.jpg",
+          "count": 1
+        }
+      ],
+      "total": 350,
+      "date": "09.10.2025 02:06:20"
+    },
+    {
+      "id": "5",
+      "userId": "1",
+      "items": [
+        {
+          "id": "10",
+          "name": "Laptop Soğutucu Stand",
+          "description": "Ergonomik tasarımlı, çift fanlı dizüstü bilgisayar soğutucu.",
+          "price": 229,
+          "image": "https://www.segment.com.tr/images/productimages/RAMPAGE_AD_RC7_GMS_01.jpg",
+          "count": 3
+        }
+      ],
+      "total": 687,
+      "date": "09.10.2025 02:10:08"
+    },
+    {
+      "id": "6",
+      "userId": "1",
+      "items": [
+        {
+          "id": "8",
+          "name": "Manyetik Kablo Seti",
+          "description": "USB-C, Lightning ve Micro girişli 3'ü 1 arada manyetik şarj kablosu.",
+          "price": 129.9,
+          "image": "https://www.teknostore.com/image/cache/data/resimler/rocoren-manyetik-kablo-duzenleyici-ve-tutucu-klips-seti-siyah-34661-682x682.jpg",
+          "count": 1
+        }
+      ],
+      "total": 129.9,
+      "date": "09.10.2025 02:11:37"
     }
   ]
 }
