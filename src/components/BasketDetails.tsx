@@ -6,6 +6,7 @@ import type { SelectedProduct } from '../types/Types'
 import RemoveCircleSharpIcon from '@mui/icons-material/RemoveCircleSharp';
 import AddCircleSharpIcon from '@mui/icons-material/AddCircleSharp';
 import { useEffect } from 'react'
+import { setBuyModal } from '../redux/slice/appSlice'
 
 export default function BasketDetails() {
 
@@ -27,6 +28,10 @@ export default function BasketDetails() {
         dispatch(setCalculetBasket())
     },[selectedProducts])
 
+    const openBuyModal = () => {
+        dispatch(setBuyModal(true))
+    }
+
   return (
     <>
        <Drawer open={basketDrawer} anchor='right' onClose={closeBasketDetails} >
@@ -34,7 +39,7 @@ export default function BasketDetails() {
         {
            selectedProducts ? 
            selectedProducts.map((product:SelectedProduct)=>(
-            <div className='flex  items-center gap-4 !mt-5'>
+            <div key={product.id} className='flex  items-center gap-4 !mt-5'>
                 <div> <img className='w-[40px]  h-[40px] ' src={product.image}  /> </div>
                 <div className='w-[120px]'>
                     <p className='text-[13px]'>{product.name.substring(0,15)}</p>
@@ -56,7 +61,7 @@ export default function BasketDetails() {
             Basket Tutarı : {calculetBasket.toFixed(2)}₺
         </div>
         <div className='text-center !mt-3'>
-            <Button sx={{textTransform:"none"}} variant='contained' size='small'>Satın Al</Button>
+            <Button onClick={openBuyModal} disabled={selectedProducts.length < 1} sx={{textTransform:"none"}} variant='contained' size='small'>Satın Al</Button>
         </div>
        </div>
       </Drawer>

@@ -1,4 +1,4 @@
-import {  Button } from "@mui/material";
+import {  Badge, Button } from "@mui/material";
 import AddIcon from '@mui/icons-material/Add';
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import LockIcon from "@mui/icons-material/Lock";
@@ -15,6 +15,7 @@ import { setBasketDrawer } from "../redux/slice/productSlice";
 
 export default function AppBar() {
   const { user } = useSelector((state: RootState) => state.app);
+  const {selectedProducts} = useSelector((state:RootState)=>state.product)
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const logout = () => {
@@ -64,7 +65,10 @@ export default function AppBar() {
             // to="/home/basket"
             onClick={()=> dispatch(setBasketDrawer(true))}
           >
+            <Badge badgeContent={selectedProducts.length} max={9}  color="primary">
             <ShoppingBasketIcon />
+            </Badge>
+            
             <span className="!mx-5 text-[#fff]">Sepetim</span>
           </Button>
         </div>

@@ -52,3 +52,9 @@ export interface SelectedProduct{
     image:string,
     count: number
 }
+export interface CardType{
+    cardOwner:string,
+    cardNumber:string,
+    cardCv:string,
+    cardExpirationDate:string
+}

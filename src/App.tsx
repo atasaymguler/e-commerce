@@ -12,6 +12,7 @@ import ControlModal from './components/ControlModal';
 import UpdateProductModal from './components/UpdateProductModal';
 import { useEffect } from 'react';
 import BasketDetails from './components/BasketDetails';
+import BuyModal from './components/BuyModal';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
       <DeleteProductModal />
       <UpdateProductModal />
       <BasketDetails />
+      <BuyModal />
     </div>
   )
 }

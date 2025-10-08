@@ -187,5 +187,14 @@
       "password": "123456Aa",
       "passwordrepetition": "123456Aa"
     }
+  ],
+  "card":[
+    {
+      "id": "1",
+      "cardOwner" : "Efe Kırak",
+      "cardNumber" : "1111111111111111",
+      "cardCv" : "111",
+      "cardExpirationDate" : "11/11"
+    }
   ]
 }

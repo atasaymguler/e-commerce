@@ -13,6 +13,7 @@ export interface AppSliceType {
   controlModal : ControlModal,
   theProductToBeProcessed : ProductType,
   updateProductModal : boolean,
+  buyModal : boolean,
  
 }
 
@@ -36,6 +37,7 @@ const initialState: AppSliceType = {
     description:"",
     image:""
   },
+  buyModal : false
  
 }
 
@@ -66,12 +68,14 @@ export const appSlice = createSlice({
    setUpdateProductModal : (state:AppSliceType , action:PayloadAction<boolean>) => {
     state.updateProductModal = action.payload
   },
+  setBuyModal : (state:AppSliceType , action : PayloadAction<boolean>) => {
+    state.buyModal = action.payload
+  }
  
-  
     },
    
 })
 
-export const { openBackdrop , closeBackdrop,setUser,setModal,setCheck,setAddProductModal ,setDeleteProductModal,setProductToBeDeleted ,setControlModal ,setProductToBeUpdated,setUpdateProductModal } = appSlice.actions
+export const { openBackdrop , closeBackdrop,setUser,setModal,setCheck,setAddProductModal ,setDeleteProductModal,setProductToBeDeleted ,setControlModal ,setProductToBeUpdated,setUpdateProductModal ,setBuyModal } = appSlice.actions
 
 export default appSlice.reducer
