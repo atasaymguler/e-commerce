@@ -12,7 +12,7 @@ import { creditCardSchema } from "../schema/CreditCardSchema";
 import cardService from "../services/CardService";
 import { type CardType, type PastOrdersType } from "../types/Types";
 import { createIdForPastOrders } from "../functions/createIdPastOrders";
-import pastOrders from "../services/PastOrders";
+import pastOrders from "../services/PastOrdersService";
 import { resetsTheBasket } from "../redux/slice/productSlice";
 
 export default function BuyModal() {
@@ -30,8 +30,10 @@ export default function BuyModal() {
   const { buyModal } = useSelector((state: RootState) => state.app);
   const dispatch = useDispatch();
   const [controlSms, setControlSms] = useState<string>("");
-  const {selectedProducts,calculetBasket} = useSelector((state:RootState)=>state.product)
-  const {user} = useSelector((state:RootState)=>state.app)
+  const { selectedProducts, calculetBasket } = useSelector(
+    (state: RootState) => state.product
+  );
+  const { user } = useSelector((state: RootState) => state.app);
   const closeBuyModal = () => {
     dispatch(setBuyModal(false));
   };
@@ -41,40 +43,38 @@ export default function BuyModal() {
     setSms(newSms);
     toast.success(`SMS Kodu : ${newSms}`);
   };
-  const buy = async (values:CardType,actions:any) => {
-    console.log(sms,controlSms);
+  const buy = async (values: CardType, actions: any) => {
+    console.log(sms, controlSms);
     if (sms === controlSms) {
       let response: CardType = await cardService.getCardInfo();
-      
+
       if (
         response.cardOwner == values.cardOwner &&
         response.cardCv == values.cardCv &&
         response.cardNumber == values.cardNumber &&
         response.cardExpirationDate == values.cardExpirationDate
       ) {
-        
-        let id : string = await createIdForPastOrders()
-        let date : Date = new Date()
-        if(user?.id){
-        let newPastOrders : PastOrdersType = {
-          id : id,
-          userId : user?.id,
-          items : selectedProducts,
-          total : calculetBasket,
-          date : date.toLocaleString()
+        let id: string = await createIdForPastOrders();
+        let date: Date = new Date();
+        if (user?.id) {
+          let newPastOrders: PastOrdersType = {
+            id: id,
+            userId: user?.id,
+            items: selectedProducts,
+            total: calculetBasket,
+            date: date.toLocaleString(),
+          };
+          let response = await pastOrders.addPastOrders(newPastOrders);
+          if (response) {
+            toast.success("Satın Alma İşlemi Başarıyla Gerçekleşti");
+            localStorage.removeItem("selectedProducts");
+            dispatch(resetsTheBasket());
+            actions.resetForm();
+            dispatch(setBuyModal(false));
+            setControlSms("");
+            setSms("");
+          }
         }
-         let response = await pastOrders.addPastOrders(newPastOrders)
-         if(response){
-          toast.success("Satın Alma İşlemi Başarıyla Gerçekleşti");
-          localStorage.removeItem("selectedProducts")
-          dispatch(resetsTheBasket())
-          actions.resetForm()
-          dispatch(setBuyModal(false))
-          setControlSms("")
-          setSms("")
-         }
-        }
-
       } else {
         toast.error("Hatalı Kart Bilgileri");
       }
@@ -83,23 +83,17 @@ export default function BuyModal() {
     }
   };
 
-  const {
-    values,
-    errors,
-    touched,
-    handleBlur,
-    handleChange,
-    handleSubmit,
-  } = useFormik({
-    initialValues: {
-      cardOwner: "",
-      cardNumber: "",
-      cardCv: "",
-      cardExpirationDate: "",
-    },
-    validationSchema: creditCardSchema,
-    onSubmit: buy,
-  });
+  const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
+    useFormik({
+      initialValues: {
+        cardOwner: "",
+        cardNumber: "",
+        cardCv: "",
+        cardExpirationDate: "",
+      },
+      validationSchema: creditCardSchema,
+      onSubmit: buy,
+    });
   return (
     <Modal open={buyModal} onClose={closeBuyModal}>
       <Box sx={style}>

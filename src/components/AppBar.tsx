@@ -25,7 +25,7 @@ export default function AppBar() {
     navigate("/");
   };
   return (
-    <div className="w-full bg-[#646161] h-[90vh] text-[#fff] flex justify-between flex-col items-center ">
+    <div className="w-full bg-[#646161] min-h-[90vh] text-[#fff] flex justify-between flex-col items-center ">
       <div className="!mt-5 ">
         <div className="flex justify-between items-center !mb-3 ">
           {user?.isAdmin && (

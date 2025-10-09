@@ -60,7 +60,7 @@ export interface CardType {
 export interface PastOrdersType{
   id:string,
   userId : string,
-  items : ProductType[],
+  items : SelectedProduct[],
   total : number,
-  date : string
+  date : string,
 }
