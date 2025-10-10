@@ -14,10 +14,8 @@ import BuyModal from './components/BuyModal';
 function App() {
 
   return (
-  <div>
-   
-  <RouterConfig  /> 
-     
+  <> 
+      <RouterConfig  /> 
       <ToastContainer position='bottom-right' autoClose={2000} />
       <Spinner />
       <MyModal />
@@ -27,7 +25,7 @@ function App() {
       <UpdateProductModal />
       <BasketDetails />
       <BuyModal />
-    </div>
+    </>
   )
 }
 

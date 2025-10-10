@@ -85,6 +85,35 @@ let theme = createTheme({
         },
       },
     },
+    MuiFormControlLabel: {
+    styleOverrides: {
+      label: {
+        fontSize: "1rem",
+        "@media (max-width:640px)": { fontSize: "0.9rem" },
+        "@media (min-width:1024px)": { fontSize: "1.05rem" },
+      },
+    },
+  },
+
+  MuiFormLabel: {
+    styleOverrides: {
+      root: {
+        fontSize: "1rem",
+        "@media (max-width:640px)": { fontSize: "0.9rem" },
+        "@media (min-width:1024px)": { fontSize: "1.05rem" },
+      },
+    },
+  },
+
+  MuiRadio: {
+    styleOverrides: {
+      root: {
+        transform: "scale(0.8)", // varsayılan boyut
+        "@media (max-width:640px)": { transform: "scale(0.7)" }, // mobilde biraz küçülür
+        "@media (min-width:1024px)": { transform: "scale(0.9)" }, // büyük ekranda biraz büyür
+      },
+    },
+  },
   },
 });
 

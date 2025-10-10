@@ -79,10 +79,10 @@ export default function RegisterPage() {
       <div className="h-full w-full flex items-center justify-center">
         <form
           onSubmit={handleSubmit}
-          className="!w-1/2 bg-[#fff] opacity-90 !p-3 rounded-md shadow-md"
+          className="w-3/4 md:w-1/2 bg-[#fff] opacity-90 !p-3 rounded-md shadow-md"
         >
-            <div className="flex gap-5">
-            <div className="!mb-1 w-1/2">
+            <div className="flex flex-col md:flex-row md:gap-3">
+            <div className="!mb-1 md:w-1/2">
               <TextField
                 value={values.firstName}
                 onChange={handleChange}
@@ -94,14 +94,14 @@ export default function RegisterPage() {
                 helperText={
                   errors.firstName &&
                   touched.firstName && (
-                    <span className="text-[11px] text-red-600">
+                    <span className="text-red-600">
                       {errors.firstName}
                     </span>
                   )
                 }
               />
             </div>
-            <div className="!mb-1 w-1/2">
+            <div className="!mb-1 md:w-1/2">
               <TextField
                 value={values.lastName}
                 onChange={handleChange}
@@ -113,7 +113,7 @@ export default function RegisterPage() {
                 helperText={
                   errors.lastName &&
                   touched.lastName && (
-                    <span className="text-[11px] text-red-600">
+                    <span className=" text-red-600">
                       {errors.lastName}
                     </span>
                   )
@@ -121,8 +121,8 @@ export default function RegisterPage() {
               />
             </div>
           </div>
-          <div className="flex gap-5">
-            <div className="!mb-1 w-1/2">
+          <div className="flex flex-col md:flex-row md:gap-3">
+            <div className="!mb-1 md:w-1/2">
               <TextField
                 value={values.username}
                 onChange={handleChange}
@@ -134,14 +134,14 @@ export default function RegisterPage() {
                 helperText={
                   errors.username &&
                   touched.username && (
-                    <span className="text-[11px] text-red-600">
+                    <span className=" text-red-600">
                       {errors.username}
                     </span>
                   )
                 }
               />
             </div>
-            <div className="!mb-1 w-1/2">
+            <div className="!mb-1 md:w-1/2">
               <TextField
                 value={values.eposta}
                 onChange={handleChange}
@@ -153,7 +153,7 @@ export default function RegisterPage() {
                 helperText={
                   errors.eposta &&
                   touched.eposta && (
-                    <span className="text-[11px] text-red-600">
+                    <span className=" text-red-600">
                       {errors.eposta}
                     </span>
                   )
@@ -161,8 +161,8 @@ export default function RegisterPage() {
               />
             </div>
           </div>
-                <div className="flex gap-5">
-            <div className="!mb-1 w-1/2">
+                <div className="flex flex-col md:flex-row md:gap-3">
+            <div className="!mb-1 md:w-1/2">
             <TextField
               type="password"
               value={values.password}
@@ -175,14 +175,14 @@ export default function RegisterPage() {
               helperText={
                 errors.password &&
                 touched.password && (
-                  <span className="text-[11px] text-red-600">
+                  <span className=" text-red-600">
                     {errors.password}
                   </span>
                 )
               }
             />
           </div>
-          <div className="!mb-1 w-1/2">
+          <div className="!mb-1 md:w-1/2">
             <TextField
               type="password"
               value={values.passwordrepetition}
@@ -195,7 +195,7 @@ export default function RegisterPage() {
               helperText={
                 errors.passwordrepetition &&
                 touched.passwordrepetition && (
-                  <span className="text-[11px] text-red-600">
+                  <span className=" text-red-600">
                     {errors.passwordrepetition}
                   </span>
                 )
@@ -204,8 +204,8 @@ export default function RegisterPage() {
           </div>
                 </div>
 
-                <div className="flex gap-5">
- <div className="!mb-1 w-1/2">
+                <div className="flex flex-col md:flex-row md:gap-3 ">
+ <div className="!my-1 md:w-1/2">
             <TextField
               value={values.age}
               onChange={handleChange}
@@ -217,13 +217,13 @@ export default function RegisterPage() {
               helperText={
                 errors.age &&
                 touched.age && (
-                  <span className="text-[11px] text-red-600">{errors.age}</span>
+                  <span className=" text-red-600">{errors.age}</span>
                 )
               }
             />
           </div>
-          <div className="!mb-1 w-1/2">
-            <FormLabel>Cinsiyet</FormLabel>
+          <div className="!mb-1 md:w-1/2">
+            <FormLabel><span className="text-[0.8rem] md:text-[0.9rem] lg:text-[1rem]">Cinsiyet</span></FormLabel>
             <RadioGroup
               row
               value={values.gender}
@@ -242,7 +242,7 @@ export default function RegisterPage() {
                 label="Erkek"
               />
               {errors.gender && touched.gender && (
-                <span className="text-[11px] text-red-600">
+                <span className=" text-red-600">
                   {errors.gender}
                 </span>
               )}
@@ -250,15 +250,15 @@ export default function RegisterPage() {
           </div>
           </div>
               <div className=" flex gap-2 items-center !mb-2">
- <FormLabel id="isAdminCheck">Admin Mi ?</FormLabel>
+ <FormLabel id="isAdminCheck"><span className="text-[0.8rem] md:text-[0.9rem] lg:text-[1rem]">Admin Mi ?</span></FormLabel>
           
-            <input className="w-[15px] h-[15px]" type="checkbox"  id="isAdmin"
+            <input className="w-[10px] md:w-[12px] lg:w-[15px]" type="checkbox"  id="isAdmin"
               checked={values.isAdmin}
               onBlur={handleBlur}
               onChange={handleChange} />
               </div>
            
-          <div className="flex gap-3">
+          <div className="flex gap-3 justify-center">
             <Button
               type="submit"
               size="small"
