@@ -1,6 +1,6 @@
 import TextField from "@mui/material/TextField";
 import AccountCircle from "@mui/icons-material/AccountCircle";
-import { Box, Button } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import LockIcon from "@mui/icons-material/Lock";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
@@ -58,7 +58,7 @@ export default function RegisterPage() {
   return (
     <div className="h-screen w-full bg-[url('/src/assets/Main1.jpg')] bg-no-repeat bg-cover bg-center">
       <div className="h-full w-full flex items-center justify-center">
-        <form onSubmit={handleSubmit} className="w-1/4 bg-[#fff] opacity-90 !p-3 rounded-md shadow-md">
+        <form onSubmit={handleSubmit} className="w-4/6 sm:w-1/2  md:w-1/3 lg:w-1/4 bg-[#fff] opacity-90 !p-3 rounded-md shadow-md">
           <div className="!mb-2">
             <Box sx={{ display: "flex", alignItems: "flex-end" }}>
               <AccountCircle sx={{ color: "action.active", mr: 1, my: 0.5 }} />
@@ -124,7 +124,7 @@ export default function RegisterPage() {
               </Button>
             </div>
             <div className="flex justify-center !mt-3">
-              <p>
+              <p className="text-[0.8rem] md:text-[1rem] lg:text-[1.05rem] ">
                 Hesabınız yok mu?{" "}
                 <span
                   onClick={() => navigate("/register")}

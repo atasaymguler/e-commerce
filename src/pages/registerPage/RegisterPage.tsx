@@ -74,14 +74,12 @@ export default function RegisterPage() {
     onSubmit: submit,
   });
 
-  console.log(values.isAdmin);
-
   return (
     <div className="h-screen w-full bg-[url('/src/assets/Main1.jpg')] bg-no-repeat bg-cover bg-center">
       <div className="h-full w-full flex items-center justify-center">
         <form
           onSubmit={handleSubmit}
-          className="w-1/2 bg-[#fff] opacity-90 !p-3 rounded-md shadow-md"
+          className="!w-1/2 bg-[#fff] opacity-90 !p-3 rounded-md shadow-md"
         >
             <div className="flex gap-5">
             <div className="!mb-1 w-1/2">
@@ -253,14 +251,7 @@ export default function RegisterPage() {
           </div>
               <div className=" flex gap-2 items-center !mb-2">
  <FormLabel id="isAdminCheck">Admin Mi ?</FormLabel>
-            {/* <Checkbox
-              id="isAdmin"
-              checked={values.isAdmin}
-              onBlur={handleBlur}
-              onChange={handleChange}
-              sx={{ }}
-             
-            /> */}
+          
             <input className="w-[15px] h-[15px]" type="checkbox"  id="isAdmin"
               checked={values.isAdmin}
               onBlur={handleBlur}
@@ -271,7 +262,7 @@ export default function RegisterPage() {
             <Button
               type="submit"
               size="small"
-              sx={{ textTransform: "none" }}
+              sx={{ textTransform: "none"  }}
               variant="contained"
              
             >
@@ -290,5 +281,6 @@ export default function RegisterPage() {
         </form>
       </div>
     </div>
+
   );
 }
