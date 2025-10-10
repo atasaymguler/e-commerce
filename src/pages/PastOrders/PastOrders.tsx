@@ -44,13 +44,13 @@ export default function PastOrders() {
     },[])
 
   return (
-    <div>
+    <div >
          <h1 className="text-3xl font-bold text-center !mb-3">Geçmiş Siparişler</h1>
   
-     <div className='!mb-3'>
+     <div className='!my-3'>
    {
-    pastOrders ?  pastOrders.map((pastOrder:PastOrdersType)=>(
-      <div className='!mt-3'>
+    pastOrders.length>0 ? pastOrders.map((pastOrder:PastOrdersType)=>(
+      <div className='!my-3'>
   <TableContainer   component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label="spanning table">
         <TableHead>
@@ -73,7 +73,7 @@ export default function PastOrders() {
         <TableBody>
             {
                pastOrder.items && pastOrder.items.map((product:SelectedProduct)=>(
-         <TableRow key={1}>
+         <TableRow key={product.id}>
               <TableCell><div className='flex items-center gap-3'>
                 <img src={product.image} className='w-[40px] h-[40px]' />
                 <span>{product.name}</span>
@@ -97,7 +97,7 @@ export default function PastOrders() {
     </TableContainer> 
       </div>
       
-    )) : <div> Hüç Ürün Satın Almamışsınız </div>
+    )) : <div className='text-center !mt-6'>Geçmiş Siparişiniz Bulunmamaktadır. </div>
    }
     </div>
 

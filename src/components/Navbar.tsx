@@ -26,7 +26,7 @@ export default function Navbar() {
     }
  
   return (
-    <AppBar position="static" sx={{height:"10vh",bgcolor:"#646161"}}>
+    <AppBar  elevation={0} position="fixed" sx={{height:"10vh",bgcolor:"#646161"}}>
       <Toolbar>
         <IconButton
           size="large"

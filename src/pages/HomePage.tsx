@@ -2,9 +2,11 @@ import { Outlet, useLocation } from "react-router-dom";
 import AppBar from "../components/AppBar";
 import { useEffect } from "react";
 import type { RegisterUserType } from "../types/Types";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setUser } from "../redux/slice/appSlice";
 import { Container } from "@mui/material";
+import Navbar from "../components/Navbar";
+import type { RootState } from "../redux/store";
 
 export default function HomePage() {
   const dispatch = useDispatch();
@@ -17,19 +19,21 @@ export default function HomePage() {
     }
   }, []);
 
+  const {user} = useSelector((state:RootState)=> state.app)
+
   const location = useLocation();
 
   const isHomeRoot = location.pathname === "/home"; // Yalnızca tam olarak "/home" ise true olur
 
   return (
     <>
-      <div className="flex">
-        <div className="w-1/6 ">
+      {user && <Navbar />}
+      <div className="flex !pt-[10vh] min-h-screen">
+        <div className="w-1/6  h-[calc(100vh-10vh)] fixed top-[10vh]  left-0  ">
       
- <AppBar />
-    
+       <AppBar />
         </div>
-        <div className="w-5/6 !py-4">
+        <div className="!ml-[16.6%] min-h-[90vh] w-5/6 overflow-y-auto !py-4">
           <Container sx={{ height: "100%" }} maxWidth="xl">
             {" "}
             <div className="h-full">
