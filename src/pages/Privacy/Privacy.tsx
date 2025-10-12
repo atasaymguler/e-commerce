@@ -56,7 +56,7 @@ export default function Privacy() {
         }
     }
 
-     const {values,handleChange , handleBlur,errors,handleSubmit,handleReset,touched} = useFormik({
+     const {values,handleChange , handleBlur,errors,handleSubmit,touched} = useFormik({
      initialValues: {
        oldPassword : '',
        newPassword: '',
@@ -70,21 +70,21 @@ export default function Privacy() {
   return (
     <div className='h-full flex justify-center items-center'>
 
-        <form onSubmit={handleSubmit} className='bg-[#dfe6e9] w-1/2 h-1/2 flex justify-center items-center rounded-lg shadow-lg'>
+        <form onSubmit={handleSubmit} className='bg-[#dfe6e9] w-5/6 md:w-1/2 h-4/6 flex justify-center items-center rounded-lg shadow-lg box-content !p-3'>
         <div>
             <div>
                 <TextField name='oldPassword' value={values.oldPassword} onChange={handleChange} onBlur={handleBlur} type='password' label="Eski Şifre" variant="outlined"
-                helperText={ (user?.password !== values.oldPassword || errors.oldPassword ) && touched.oldPassword && (errors.oldPassword ? <span className='text-red-600 text-[10px]'>{errors.oldPassword}</span>: <span className='text-red-600 text-[10px]'>Şifreniz Yanlıştır</span> )  }
+                helperText={ (user?.password !== values.oldPassword || errors.oldPassword ) && touched.oldPassword && (errors.oldPassword ? <span className='text-red-600 '>{errors.oldPassword}</span>: <span className='text-red-600 '>Şifreniz Yanlıştır</span> )  }
                 />
             </div>
               <div className='!mt-4'>
                 <TextField name='newPassword' value={values.newPassword} onChange={handleChange} onBlur={handleBlur} type='password' label="Yeni Şifre" variant="outlined" 
-                helperText={errors.newPassword && touched.newPassword && <span className='text-red-600 text-[10px]'>{errors.newPassword}</span>}
+                helperText={errors.newPassword && touched.newPassword && <span className='text-red-600 '>{errors.newPassword}</span>}
                 />
             </div>
               <div  className='!mt-4'>
                 <TextField name='newPasswordRepeat' value={values.newPasswordRepeat} onChange={handleChange} onBlur={handleBlur} type='password' label="Tekrardan Yeni Şifre" variant="outlined" 
-                 helperText={errors.newPasswordRepeat && touched.newPasswordRepeat && <span className='text-red-600 text-[10px]'>{errors.newPasswordRepeat}</span>}
+                 helperText={errors.newPasswordRepeat && touched.newPasswordRepeat && <span className='text-red-600 '>{errors.newPasswordRepeat}</span>}
                 />
             </div>
             <div className='!mt-4 flex justify-center items-center'>

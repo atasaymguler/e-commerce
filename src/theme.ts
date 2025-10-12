@@ -47,10 +47,10 @@ let theme = createTheme({
     MuiInputLabel: {
       styleOverrides: {
         root: {
-          fontSize: "1rem",
-         "@media (max-width:640px)": { fontSize: "0.9rem" }, // sm ve altı
-      "@media (min-width:1024px)": { fontSize: "1.05rem" }, // lg
-      "@media (min-width:1280px)": { fontSize: "1.1rem" }, // xl
+          fontSize: "0.85rem",
+          "@media (max-width:640px)": { fontSize: "0.7rem" }, // sm ve altı
+          "@media (min-width:1024px)": { fontSize: "1rem" }, // lg
+          "@media (min-width:1280px)": { fontSize: "1.1rem" }, // xl
         },
       },
     },
