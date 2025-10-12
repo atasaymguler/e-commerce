@@ -29,7 +29,7 @@ export default function HomePage() {
     <>
       {user && <Navbar />}
       <div className="flex !pt-[10vh] min-h-screen">
-        <div className="w-1/6  h-[calc(100vh-10vh)] fixed top-[10vh]  left-0  ">
+        <div className="w-1/7  h-[calc(100vh-10vh)] fixed top-[10vh]  left-0  ">
       
        <AppBar />
         </div>

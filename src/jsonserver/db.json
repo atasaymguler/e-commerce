@@ -125,13 +125,6 @@
       "description": "İos 19, Kahverengi",
       "price": 2500,
       "image": "https://www.apple.com/newsroom/images/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/article/Apple-iPhone-16-Pro-hero-geo-240909_inline.jpg.large.jpg"
-    },
-    {
-      "id": "23",
-      "name": "Samsung Monitör",
-      "description": "Oyuncu Monitörü",
-      "price": 6500,
-      "image": "https://static.sinerji.gen.tr/Images/LG/NUN-ekran-goruntusu-2024-04-29-161746.jpg"
     }
   ],
   "users": [
@@ -282,6 +275,46 @@
       ],
       "total": 700,
       "date": "09.10.2025 09:03:25"
+    },
+    {
+      "id": "5",
+      "userId": "1",
+      "items": [
+        {
+          "id": "7",
+          "name": "LED Masa Lambası",
+          "description": "Dokunmatik kontrollü, 3 kademeli parlaklığa sahip LED masa lambası.",
+          "price": 189,
+          "image": "https://www.perpaelektrik.com/idea/fl/09/myassets/products/227/led-masa-lambasi-50x45-cm-pl20057_min.jpg?revision=1697143329",
+          "count": 3
+        },
+        {
+          "id": "5",
+          "name": "Stand Telefon",
+          "description": "Ayarlanabilir açılı masaüstü",
+          "price": 45,
+          "image": "https://cdn-img.pttavm.com/pimages/592/314/198/638d95dc0c087.jpg?v=202402141157",
+          "count": 2
+        },
+        {
+          "id": "12",
+          "name": "Akıllı Bileklik",
+          "description": "Adım sayar, nabız ölçer ve uyku takibi özellikli fitness bilekliği.",
+          "price": 279.9,
+          "image": "https://cdn2.a101.com.tr/dbmk89vnr/CALL/Image/getcl/livephotos/8/26008565DEFAULT/26008565DEFAULT_635.jpg",
+          "count": 1
+        },
+        {
+          "id": "22",
+          "name": "Iphone 16 Pro Max",
+          "description": "İos 19, Kahverengi",
+          "price": 2500,
+          "image": "https://www.apple.com/newsroom/images/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/article/Apple-iPhone-16-Pro-hero-geo-240909_inline.jpg.large.jpg",
+          "count": 2
+        }
+      ],
+      "total": 5936.9,
+      "date": "11.10.2025 21:08:19"
     }
   ]
 }

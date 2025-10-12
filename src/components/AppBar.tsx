@@ -1,5 +1,5 @@
-import {  Badge, Button } from "@mui/material";
-import AddIcon from '@mui/icons-material/Add';
+import { Badge, Button } from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import LockIcon from "@mui/icons-material/Lock";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
@@ -9,116 +9,242 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { toast } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { setAddProductModal,  setUser } from "../redux/slice/appSlice";
+import { setAddProductModal, setUser } from "../redux/slice/appSlice";
 import type { RootState } from "../redux/store";
 import { setBasketDrawer } from "../redux/slice/productSlice";
+import LogoutIcon from "@mui/icons-material/Logout";
 
 export default function AppBar() {
   const { user } = useSelector((state: RootState) => state.app);
-  const {selectedProducts} = useSelector((state:RootState)=>state.product)
+  const { selectedProducts } = useSelector((state: RootState) => state.product);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const logout = () => {
     toast.success("Çıkış Yapıldı");
     localStorage.removeItem("user");
+    localStorage.removeItem("currentPage");
     dispatch(setUser(null));
     navigate("/");
   };
   return (
-    <div className="w-full bg-[#646161] min-h-[90vh] text-[#fff] flex justify-between flex-col items-center ">
-      <div className="!mt-5 ">
-        <div className="flex justify-between items-center !mb-3 ">
+    <div className="w-full bg-[#95afc0] min-h-[90vh] text-[#fff] flex  flex-col items-center ">
+      <div className="!mt-5 flex flex-col items-start ">
+        <div className="flex items-center  !mb-3 ">
           {user?.isAdmin && (
             <Button
               size="large"
               color="inherit"
               variant="text"
-              sx={{ textTransform: "none" }}
+              sx={{
+                textTransform: "none",
+                display: "flex",
+                alignItems: "center",
+
+                justifyContent: {
+                  xs: "center",
+                  md: "flex-start",
+                },
+              }}
               onClick={() => dispatch(setAddProductModal(true))}
             >
-              <AddIcon />
-              <span className="!mx-5 text-[#fff]">Ürün Ekle</span>
+              <div className="md:hidden">
+                <AddIcon sx={{ fontSize: "22px" }} />
+              </div>
+              <p className="hidden  text-[#fff] md:block md:text-[0.6rem]  lg:text-[0.85rem] xl:text-[1rem]">
+                Ürün Ekle
+              </p>
             </Button>
           )}
         </div>
 
-        <div className="flex justify-between items-center !mb-3 ">
+        <div className="flex items-center justify-center  !mb-3 ">
           <Button
             size="large"
             color="inherit"
             variant="text"
-            sx={{ textTransform: "none" }}
+            sx={{
+              textTransform: "none",
+              display: "flex",
+              alignItems: "center",
+
+              justifyContent: {
+                xs: "center",
+                md: "flex-start",
+              },
+            }}
             component={Link}
             to="/home/products"
           >
-            <ShoppingCartIcon />
-            <span className="!mx-5 text-[#fff]">Ürünler</span>
-          </Button>
-        </div>
-        <div className="flex justify-between items-center !mb-3">
-          <Button
-            size="large"
-            color="inherit"
-            variant="text"
-            sx={{ textTransform: "none" }}
-            // component={Link}
-            // to="/home/basket"
-            onClick={()=> dispatch(setBasketDrawer(true))}
-          >
-            <Badge badgeContent={selectedProducts.length} max={9}  color="primary">
-            <ShoppingBasketIcon />
-            </Badge>
-            
-            <span className="!mx-5 text-[#fff]">Sepetim</span>
+            <div className="md:hidden">
+              <ShoppingCartIcon sx={{ fontSize: "22px" }} />
+            </div>
+            <p className="hidden  text-[#fff] md:block md:text-[0.6rem]  lg:text-[0.85rem] xl:text-[1rem]">
+              Ürünler
+            </p>
           </Button>
         </div>
 
-        <div className="flex justify-between items-center !mb-3">
+        <div className="flex items-center justify-center !mb-3">
           <Button
             size="large"
             color="inherit"
             variant="text"
-            sx={{ textTransform: "none" }}
+            sx={{
+              textTransform: "none",
+              display: "flex",
+              alignItems: "center",
+
+              justifyContent: {
+                xs: "center",
+                md: "flex-start",
+              },
+            }}
+            onClick={() => dispatch(setBasketDrawer(true))}
+          >
+            <div className="md:hidden">
+              <Badge
+                badgeContent={selectedProducts.length}
+                max={9}
+                color="primary"
+              >
+                <ShoppingBasketIcon sx={{ fontSize: "22px" }} />
+              </Badge>
+            </div>
+
+            <div className="hidden  md:block">
+              <Badge
+                badgeContent={selectedProducts.length}
+                max={9}
+                color="primary"
+              >
+                <p className="hidden  text-[#fff] md:block md:text-[0.6rem]  lg:text-[0.85rem] xl:text-[1rem]">
+                  Sepetim
+                </p>
+              </Badge>
+            </div>
+          </Button>
+        </div>
+
+        <div className="flex  items-center   justify-center !mb-3">
+          <Button
+            size="large"
+            color="inherit"
+            variant="text"
+            sx={{
+              textTransform: "none",
+              display: "flex",
+              alignItems: "center",
+
+              justifyContent: {
+                xs: "center",
+                md: "flex-start",
+              },
+            }}
             component={Link}
             to="/home/past-orders"
           >
-            <ContentPasteIcon />
-            <span className="!mx-5 text-[#fff]">Geçmiş Siparişler</span>
+            <div className="md:hidden">
+              <ContentPasteIcon sx={{ fontSize: "22px" }} />
+            </div>
+
+            <p className="hidden  text-[#fff] md:block md:text-[0.6rem]  lg:text-[0.85rem] xl:text-[1rem]">
+              Geçmiş Siparişler
+            </p>
           </Button>
         </div>
-        <div className="flex justify-between items-center !mb-3">
+        <div className="flex  items-center  justify-center !mb-3">
           <Button
             size="large"
             color="inherit"
             variant="text"
-            sx={{ textTransform: "none" }}
+            sx={{
+              textTransform: "none",
+              display: "flex",
+              alignItems: "center",
+
+              justifyContent: {
+                xs: "center",
+                md: "flex-start",
+              },
+            }}
             component={Link}
             to="/home/account-details"
           >
-            <AccountBoxIcon />
-            <span className="!mx-5 text-[#fff]">Hesap Bilgileri</span>
+            <div className="md:hidden">
+              <AccountBoxIcon
+                sx={{
+                  fontSize: "22px",
+                }}
+              />
+            </div>
+
+            <p className="hidden  text-[#fff] md:block md:text-[0.6rem]  lg:text-[0.85rem] xl:text-[1rem]">
+              Hesap Bilgileri
+            </p>
           </Button>
         </div>
-        <div className="flex justify-between items-center !mb-3">
+        <div className="flex items-center justify-center !mb-3">
           <Button
             size="large"
             color="inherit"
             variant="text"
-            sx={{ textTransform: "none" }}
+            sx={{
+              textTransform: "none",
+              display: "flex",
+              alignItems: "center",
+
+              justifyContent: {
+                xs: "center",
+                md: "flex-start",
+              },
+            }}
             component={Link}
             to="/home/privacy"
           >
-            <LockIcon />
-            <span className="!mx-5 text-[#fff]">Gizlilik</span>
+            <div className="md:hidden">
+              <LockIcon
+                sx={{
+                  fontSize: "22px",
+                }}
+              />
+            </div>
+
+            <p className="hidden  text-[#fff] md:block md:text-[0.6rem]  lg:text-[0.85rem] xl:text-[1rem]">
+              Gizlilik
+            </p>
+          </Button>
+        </div>
+        <div className="!mb-3">
+          <Button
+            size="large"
+            color="inherit"
+            onClick={logout}
+            variant="text"
+            sx={{
+              textTransform: "none",
+              display: "flex",
+              alignItems: "center",
+
+              justifyContent: {
+                xs: "center",
+                md: "flex-start",
+              },
+            }}
+          >
+            <div className="md:hidden">
+              <LogoutIcon
+                sx={{
+                  fontSize: "22px",
+                }}
+              />
+            </div>
+
+            <p className="hidden  text-[#fff] md:block md:text-[0.6rem]  lg:text-[0.85rem] xl:text-[1rem]">
+              Çıkış Yap
+            </p>
           </Button>
         </div>
       </div>
-
-      {/* <Box sx={{ p: 2,display:"none" }}>
-    <Button onClick={logout} fullWidth variant="outlined" color='inherit'>
-      Çıkış Yap
-    </Button>
-  </Box> */}
     </div>
   );
 }

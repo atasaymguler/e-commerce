@@ -21,7 +21,7 @@ export default function RegisterPage() {
       dispatch(openBackdrop())
       let userCheck:boolean = await checkUser(values)
       if(userCheck){
-        toast.success("Giriş Yapılıyor");
+        toast.success("Giriş Yapıldı");
         navigate("/home")
         findUser(values)
       }else{

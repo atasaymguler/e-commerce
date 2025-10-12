@@ -26,7 +26,7 @@ export default function Navbar() {
     }
  
   return (
-    <AppBar  elevation={0} position="fixed" sx={{height:"10vh",bgcolor:"#646161"}}>
+    <AppBar  elevation={0} position="fixed" sx={{height:"10vh",bgcolor:"#95afc0"}}>
       <Toolbar>
         <IconButton
           size="large"
@@ -38,14 +38,14 @@ export default function Navbar() {
         >
           <img src={Icon} className="w-[50px] h-[50px] rounded-[50%]" />
         </IconButton>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+        <Typography variant="h3" component="div" sx={{ flexGrow: 1 }}>
           Plaza
         </Typography>
         <div className="flex justify-center items-center gap-5">
-            <p>Hoşgeldin,{user?.firstName}</p>
-          <Button onClick={logout} variant="outlined" sx={{ textTransform: "none" }}  color="inherit">
+            <p className="text-[12px] md:text-[0.85rem] lg:text-[1rem]">Hoşgeldin,{user?.firstName}</p>
+          {/* <Button onClick={logout} variant="outlined" sx={{ textTransform: "none" }}  color="inherit">
             Çıkış Yap
-          </Button>
+          </Button> */}
         </div>
       </Toolbar>
     </AppBar>
