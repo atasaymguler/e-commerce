@@ -129,13 +129,13 @@
   ],
   "users": [
     {
-      "id": "1",
       "firstName": "Efe",
       "lastName": "Kırak",
       "username": "efekirak",
       "eposta": "efekirak@gmail.com",
-      "age": "25",
-      "gender": "male",
+      "age": "24",
+      "gender": "female",
+      "id": "1",
       "token": "mAtn9kZuiKUaMlu",
       "isAdmin": true,
       "password": "123654Aa",

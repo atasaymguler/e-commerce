@@ -88,9 +88,9 @@ let theme = createTheme({
     MuiFormControlLabel: {
     styleOverrides: {
       label: {
-        fontSize: "1rem",
-        "@media (max-width:640px)": { fontSize: "0.9rem" },
-        "@media (min-width:1024px)": { fontSize: "1.05rem" },
+        fontSize: "0.7rem",
+        "@media (max-width:640px)": { fontSize: "0.6rem" },
+        "@media (min-width:1024px)": { fontSize: "0.8rem" },
       },
     },
   },
@@ -98,9 +98,12 @@ let theme = createTheme({
   MuiFormLabel: {
     styleOverrides: {
       root: {
-        fontSize: "1rem",
-        "@media (max-width:640px)": { fontSize: "0.9rem" },
-        "@media (min-width:1024px)": { fontSize: "1.05rem" },
+         fontSize: "0.7rem",
+        "@media (max-width:640px)": { fontSize: "0.6rem" },
+        "@media (min-width:1024px)": { fontSize: "0.8rem" },
+        // fontSize: "1rem",
+        // "@media (max-width:640px)": { fontSize: "0.9rem" },
+        // "@media (min-width:1024px)": { fontSize: "1.05rem" },
       },
     },
   },

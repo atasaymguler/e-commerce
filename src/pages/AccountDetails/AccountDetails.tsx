@@ -70,7 +70,7 @@ export default function RegisterPage() {
   return (
     <div className="h-full">
       <div className=" h-full flex justify-center items-center">
-        <div className="h-1/2 w-1/2 bg-[#dfe6e9]  flex flex-col items-center justify-center  opacity-90 !p-5 rounded-md  !box-content shadow-lg">
+        <div className="h-1/2 w-1/2 md:w-2/3 md:h-1/2 lg:w-1/2 bg-[#dfe6e9]  flex flex-col md:items-center justify-center  opacity-90 !px-4 !py-6 md:!p-3 rounded-md  !box-content shadow-lg">
           <fieldset  className="w-full" disabled={check}>
             <Formik
            innerRef={formikRef}
@@ -92,11 +92,10 @@ export default function RegisterPage() {
                 touched,
                 handleChange,
                 handleBlur,
-                handleSubmit,
               }) => (
                 <Form>
-                  <div className="flex gap-5 !mb-5">
-                    <div className="!mb-1 w-1/2">
+                  <div className="flex flex-col md:flex-row gap-2 !mb-3">
+                    <div className="!mb-2 md:w-1/2 ">
                       <TextField
                         value={values.firstName ?? ""}
                         onChange={handleChange}
@@ -114,7 +113,7 @@ export default function RegisterPage() {
                         }
                       />
                     </div>
-                    <div className="!mb-1 w-1/2">
+                    <div className="!mb-2 md:w-1/2">
                       <TextField
                         value={values.lastName ?? ""}
                         onChange={handleChange}
@@ -134,8 +133,8 @@ export default function RegisterPage() {
                     </div>
                   </div>
 
-                  <div className="flex gap-5 !mb-5 justify-between">
-                    <div className="!mb-1 w-1/2">
+                  <div className="flex flex-col md:flex-row gap-2 !mb-3">
+                    <div className="!mb-2 md:w-1/2 ">
                       <TextField
                         value={values.username ?? ""}
                         onChange={handleChange}
@@ -153,7 +152,7 @@ export default function RegisterPage() {
                         }
                       />
                     </div>
-                    <div className="!mb-1 w-1/2">
+                    <div className="!mb-2 md:w-1/2">
                       <TextField
                         value={values.eposta ?? ""}
                         onChange={handleChange}
@@ -173,8 +172,8 @@ export default function RegisterPage() {
                     </div>
                   </div>
 
-                  <div className="flex gap-5 !mb-5 items-center">
-                    <div className="!mb-1 w-1/2">
+                  <div className="flex flex-col md:flex-row gap-2 md:items-center">
+                    <div className="!mb-2 md:w-1/2">
                       <TextField
                         value={values.age ?? ""}
                         onChange={handleChange}
@@ -192,16 +191,18 @@ export default function RegisterPage() {
                         }
                       />
                     </div>
-                    <div className="!mb-1 w-1/2">
-                      <FormLabel>Cinsiyet</FormLabel>
+                    <div className="!mb-2 md:w-1/2">
+                      <FormLabel> <span className="text-[0.8rem] md:text-[0.9rem] lg:text-[1rem]">Cinsiyet</span></FormLabel>
                       <RadioGroup
                         row
                         value={values.gender ?? ""}
                         name="gender"
                         onChange={handleChange}
                         onBlur={handleBlur}
+                    
                       >
                         <FormControlLabel
+                          
                           value="female"
                           checked={values.gender === "female"}
                           control={<Radio />}
@@ -225,7 +226,7 @@ export default function RegisterPage() {
               )}
             </Formik>
           </fieldset>
-          <div className="flex gap-3">
+          <div className="flex gap-3 justify-start">
             <Button
               size="small"
               sx={{ textTransform: "none" }}
