@@ -1,4 +1,4 @@
-import {  Button, Drawer } from '@mui/material'
+import {  Button, Drawer, Typography } from '@mui/material'
 import { useDispatch, useSelector } from 'react-redux'
 import type { RootState } from '../redux/store'
 import { minusSelectedProduct, plusSelectedProduct, setBasketDrawer, setCalculetBasket } from '../redux/slice/productSlice'
@@ -35,15 +35,18 @@ export default function BasketDetails() {
   return (
     <>
        <Drawer open={basketDrawer} anchor='right' onClose={closeBasketDetails} >
-       <div className='w-[20vw] !p-2'>
+       <div className='w-[30vw] md:w-[25vw] lg:w-[20vw] !p-2'>
         {
            selectedProducts ? 
            selectedProducts.map((product:SelectedProduct)=>(
             <div key={product.id} className='flex  items-center gap-4 !mt-5'>
                 <div> <img className='w-[40px]  h-[40px] ' src={product.image}  /> </div>
-                <div className='w-[120px]'>
+                {/* <div className='w-[120px]'>
                     <p className='text-[13px]'>{product.name.substring(0,15)}</p>
-                </div>
+                </div> */}
+                 <Typography  variant="body2" sx={{  color: 'text.secondary' }}>
+                {product.name.substring(0,15)}
+                </Typography>
                 <div className='w-[40px]'>
                     <p>({product.count})</p>
                 </div>

@@ -32,9 +32,10 @@ let theme = createTheme({
       lineHeight: 1.5,
     },
     body2: {
-      fontSize: "0.8rem", // ~14px
+      fontSize: "0.7rem", // ~14px
       lineHeight: 1.45,
-    },
+    }
+    ,
     button: {
       textTransform: "none",
       fontWeight: 600,
