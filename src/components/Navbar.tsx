@@ -26,7 +26,7 @@ export default function Navbar() {
     }
  
   return (
-    <AppBar  elevation={0} position="fixed" sx={{height:"10vh",bgcolor:"#95afc0"}}>
+    <AppBar className="flex justify-center"  elevation={0} position="fixed" sx={{height:"10vh",bgcolor:"#95afc0"}}>
       <Toolbar>
         <IconButton
           size="large"

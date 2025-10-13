@@ -19,7 +19,7 @@ export default function ProductList() {
   let page = getPage()
   const [currentPage, setCurrentPage] = useState<number>(page);
 
-  const itemsPerPage = 8;
+  const itemsPerPage = 12;
 
   const dispatch = useAppDispatch();
   const dispatch1 = useDispatch();

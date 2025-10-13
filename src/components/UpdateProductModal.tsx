@@ -51,7 +51,7 @@ export default function UpdateProductModal() {
           toast.success("Ürün Başarıyla Güncellendi")
           let page : number = getPage()
            setTimeout(()=>{
-                           dispatch1(getProductByPage({currentPage:page,itemsPerPage:8}))
+                           dispatch1(getProductByPage({currentPage:page,itemsPerPage:12}))
                           },100)
                            dispatch(setProductToBeUpdated({id:"",name:"",price:0,description:"",image:""}))
                           dispatch(setUpdateProductModal(false))

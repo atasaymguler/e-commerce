@@ -33,7 +33,7 @@ export default function HomePage() {
       
        <AppBar />
         </div>
-        <div className="!ml-[16.6%] min-h-[90vh] w-5/6 overflow-y-auto !py-4">
+        <div className="!ml-[14.2%] min-h-[90vh] w-5/6 overflow-y-auto !py-4">
           <Container sx={{ height: "100%" }} maxWidth="xl">
             {" "}
             <div className="h-full">

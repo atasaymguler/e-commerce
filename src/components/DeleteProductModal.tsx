@@ -51,7 +51,7 @@ export default function DeleteProductModal() {
         toast.success("Ürün başarıyla silindi");
         let page: number = getPage();
         setTimeout(() => {
-          dispatch1(getProductByPage({ currentPage: page, itemsPerPage: 8 }));
+          dispatch1(getProductByPage({ currentPage: page, itemsPerPage: 12 }));
         }, 100);
         closeDeleteProductModal();
         dispatch(

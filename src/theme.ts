@@ -25,14 +25,14 @@ let theme = createTheme({
     },
     h3: {
       fontWeight: 500,
-      fontSize: "1.75rem", // ~28px
+      fontSize: "1.2rem", //
     },
     body1: {
       fontSize: "1rem", // ~16px
       lineHeight: 1.5,
     },
     body2: {
-      fontSize: "0.875rem", // ~14px
+      fontSize: "0.8rem", // ~14px
       lineHeight: 1.45,
     },
     button: {

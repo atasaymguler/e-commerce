@@ -37,10 +37,10 @@ export default function Product({product} : ProductPropsType) {
     const navigate = useNavigate()
 
   return (
-   <Card sx={{ width:300,boxShadow:"1px 2px 3px lightgrey" , transition: 'all 0.5s ease-in-out', "&:hover": { boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.2)' } }}>
+   <Card sx={{ width:250,boxShadow:"1px 2px 3px lightgrey" , transition: 'all 0.5s ease-in-out', "&:hover": { boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.2)' } }}>
       <img src={image}  className='w-full h-[100px] object-scale-down' />
       <CardContent sx={{height:"100px" ,}}>
-        <Typography gutterBottom variant="h6" component="div">
+        <Typography gutterBottom variant="h3" component="div">
          {name.substring(0,40)}...
         </Typography>
         <Typography  variant="body2" sx={{  color: 'text.secondary',height:"100px" }}>

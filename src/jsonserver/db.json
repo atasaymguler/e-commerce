@@ -1,18 +1,11 @@
 {
   "products": [
     {
-      "id": "4",
-      "name": "Bluetooth Hoparlör",
-      "description": "Suya dayanıklı bluetooth hoparlör. Paslanmaz , yıpranmaz , 5 yıl garantili hoparlör",
-      "price": 350,
-      "image": "https://www.teknostore.com/image/cache/data/resimler/lecoo-rs19-rgb-aydinlatmali-bluetooth-stereo-10w-tasinabilir-hoparlor-siyah-25109-682x682.jpg"
-    },
-    {
       "id": "5",
-      "name": "Stand Telefon",
-      "description": "Ayarlanabilir açılı masaüstü",
-      "price": 45,
-      "image": "https://cdn-img.pttavm.com/pimages/592/314/198/638d95dc0c087.jpg?v=202402141157"
+      "name": "Nokia 3310",
+      "description": "Çok dayanıklı, tuşlu telefon",
+      "price": 1000,
+      "image": "https://cdn.cimri.io/image/1200x1200/nokia-3310-tuslu-klasik_856983301.jpg"
     },
     {
       "id": "6",
