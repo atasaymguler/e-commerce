@@ -35,32 +35,30 @@ export default function BasketDetails() {
   return (
     <>
        <Drawer open={basketDrawer} anchor='right' onClose={closeBasketDetails} >
-       <div className='w-[30vw] md:w-[25vw] lg:w-[20vw] !p-2'>
+       <div className='w-[40vw] md:w-[30vw] lg:w-[20vw] !p-2'>
         {
-           selectedProducts ? 
+           selectedProducts.length ? 
            selectedProducts.map((product:SelectedProduct)=>(
-            <div key={product.id} className='flex  items-center gap-4 !mt-5'>
-                <div> <img className='w-[40px]  h-[40px] ' src={product.image}  /> </div>
-                {/* <div className='w-[120px]'>
-                    <p className='text-[13px]'>{product.name.substring(0,15)}</p>
-                </div> */}
-                 <Typography  variant="body2" sx={{  color: 'text.secondary' }}>
-                {product.name.substring(0,15)}
-                </Typography>
-                <div className='w-[40px]'>
-                    <p>({product.count})</p>
+            <div key={product.id} className='flex  items-center gap-1 !mt-5'>
+                <div className='w-1/4'> <img className='w-[30px] sm:w-[40px] md:w-[50px] ' src={product.image}  /> </div>
+                <div  className='w-1/4 text-center'>
+                    <p className='text-[12px] sm:text-[14px] md:text-[16px]'>{product.name.substring(0,5)}</p>
                 </div>
-                <div className='flex gap-2'>
-                    <RemoveCircleSharpIcon  onClick={()=> minusProduct(product.id)}  sx={{color:"black",fontSize:"20px",cursor:"pointer"}} />
+               
+                <div className='w-1/4 text-center'>
+                    <p className='text-[12px] sm:text-[14px] md:text-[16px]'>({product.count})</p>
+                </div>
+                <div className='w-1/4 flex items-center justify-end gap-2'>
+                    <RemoveCircleSharpIcon  onClick={()=> minusProduct(product.id)}  sx={{color:"black",fontSize:{xs:"14px" , sm:"16px",md:"18px",lg:"20px"},cursor:"pointer"}} />
 
-    <AddCircleSharpIcon onClick={()=> plusProduct(product.id)} sx={{color:"black",fontSize:"20px",cursor:"pointer"}} />
+    <AddCircleSharpIcon onClick={()=> plusProduct(product.id)} sx={{color:"black",fontSize:{xs:"14px" , sm:"16px",md:"18px",lg:"20px"},cursor:"pointer"}} />
                 </div>
             </div>
            ))
              
-           :  <div className='!p-5'>Hiç Ürün Yok :(</div> 
+           :  <div className='!p-5 text-center text-[12px] sm:text-[14px] md:text-[16px]'>Hiç Ürün Yok :(</div> 
         }
-        <div className='text-center !mt-3'>
+        <div className='text-center text-[12px] sm:text-[14px] md:text-[16px] !mt-3'>
             Basket Tutarı : {calculetBasket.toFixed(2)}₺
         </div>
         <div className='text-center !mt-3'>
