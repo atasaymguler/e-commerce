@@ -20,17 +20,17 @@ import { toast } from "react-toastify";
 import { useAppDispatch } from "../pages/Products/hooks";
 import { getProductByPage } from "../redux/slice/productSlice";
 
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
-};
+// const style = {
+//   position: "absolute",
+//   top: "50%",
+//   left: "50%",
+//   transform: "translate(-50%, -50%)",
+//    width: 400,
+//   bgcolor: "background.paper",
+//   border: "2px solid #000",
+//   boxShadow: 24,
+//   p: 4,
+// };
 
 export default function AddProductModal() {
   const { addProductModal } = useSelector((state: RootState) => state.app);
@@ -88,7 +88,27 @@ export default function AddProductModal() {
   return (
     <div>
       <Modal open={addProductModal} onClose={handleClose}>
-        <Box sx={style}>
+        <Box   sx={{
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      backgroundColor: "#fff",
+      border: "2px solid #000",
+      boxShadow: 24,
+      p: 4,
+      width: 500,
+      maxWidth: "90vw",
+      maxHeight: "90vh",
+      overflow: "auto",
+
+      "@media (max-width:640px)": {
+        width: "80vw", // Daha mantıklı bir değer
+      },
+      "@media (min-width:1024px)": {
+        width: "500px", // Sabit genişlik veya "40vw"
+      },
+    }}>
           <h1 className="text-2xl !mb-2 text-center">Ürün Ekle</h1>
           <div>
             <form onSubmit={handleSubmit}>

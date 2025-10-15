@@ -27,20 +27,21 @@ let theme = createTheme({
       fontWeight: 600,
       fontSize: "1.6rem", //
     },
-     h4: {
-      fontWeight: 500,
+    h4: {
+      fontWeight: 600,
       fontSize: "1.2rem", //
     },
-    
+
     body1: {
       fontSize: "1rem", // ~16px
       lineHeight: 1.5,
     },
     body2: {
-      fontSize: "0.7rem", // ~14px
+      fontSize: "0.85rem",
       lineHeight: 1.45,
-    }
-    ,
+       "@media (max-width:640px)": { fontSize: "0.7rem" }, // sm ve altı
+          "@media (min-width:1024px)": { fontSize: "1rem" }, // lg
+    },
     button: {
       textTransform: "none",
       fontWeight: 600,
@@ -64,9 +65,8 @@ let theme = createTheme({
       styleOverrides: {
         input: {
           fontSize: "0.8rem",
-        "@media (max-width:640px)": { fontSize: "0.7rem" }, // sm ve altı
-      "@media (min-width:1024px)": { fontSize: "0.9rem" }, // lg
-     
+          "@media (max-width:640px)": { fontSize: "0.7rem" }, // sm ve altı
+          "@media (min-width:1024px)": { fontSize: "0.9rem" }, // lg
         },
       },
     },
@@ -74,74 +74,73 @@ let theme = createTheme({
       styleOverrides: {
         root: {
           fontSize: "0.7rem",
-         "@media (max-width:640px)": { fontSize: "0.6rem" }, // sm ve altı
-      "@media (min-width:1024px)": { fontSize: "0.8rem" }, // lg
-     
+          "@media (max-width:640px)": { fontSize: "0.6rem" }, // sm ve altı
+          "@media (min-width:1024px)": { fontSize: "0.8rem" }, // lg
         },
       },
     },
     MuiButton: {
       styleOverrides: {
         root: {
-         fontSize: "0.8rem",
-        "@media (max-width:640px)": { fontSize: "0.7rem" }, // sm ve altı
-      "@media (min-width:1024px)": { fontSize: "0.9rem" }, // lg
+          fontSize: "0.8rem",
+          "@media (max-width:640px)": { fontSize: "0.7rem" }, // sm ve altı
+          "@media (min-width:1024px)": { fontSize: "0.9rem" }, // lg
           fontWeight: 600,
           textTransform: "none",
         },
       },
     },
     MuiFormControlLabel: {
-    styleOverrides: {
-      label: {
-        fontSize: "0.7rem",
-        "@media (max-width:640px)": { fontSize: "0.6rem" },
-        "@media (min-width:1024px)": { fontSize: "0.8rem" },
+      styleOverrides: {
+        label: {
+          fontSize: "0.7rem",
+          "@media (max-width:640px)": { fontSize: "0.6rem" },
+          "@media (min-width:1024px)": { fontSize: "0.8rem" },
+        },
       },
     },
-  },
 
-  MuiFormLabel: {
-    styleOverrides: {
-      root: {
-         fontSize: "0.7rem",
-        "@media (max-width:640px)": { fontSize: "0.6rem" },
-        "@media (min-width:1024px)": { fontSize: "0.8rem" },
-        // fontSize: "1rem",
-        // "@media (max-width:640px)": { fontSize: "0.9rem" },
-        // "@media (min-width:1024px)": { fontSize: "1.05rem" },
+    MuiFormLabel: {
+      styleOverrides: {
+        root: {
+          fontSize: "0.7rem",
+          "@media (max-width:640px)": { fontSize: "0.6rem" },
+          "@media (min-width:1024px)": { fontSize: "0.8rem" },
+          // fontSize: "1rem",
+          // "@media (max-width:640px)": { fontSize: "0.9rem" },
+          // "@media (min-width:1024px)": { fontSize: "1.05rem" },
+        },
       },
     },
-  },
 
-  MuiRadio: {
-    styleOverrides: {
-      root: {
-        transform: "scale(0.8)", // varsayılan boyut
-        "@media (max-width:640px)": { transform: "scale(0.7)" }, // mobilde biraz küçülür
-        "@media (min-width:1024px)": { transform: "scale(0.9)" }, // büyük ekranda biraz büyür
+    MuiRadio: {
+      styleOverrides: {
+        root: {
+          transform: "scale(0.8)", // varsayılan boyut
+          "@media (max-width:640px)": { transform: "scale(0.7)" }, // mobilde biraz küçülür
+          "@media (min-width:1024px)": { transform: "scale(0.9)" }, // büyük ekranda biraz büyür
+        },
       },
     },
-  },
-  MuiTable : {
-    styleOverrides :{
-      root:{
-        minWidth : "200px !important",
-
+    MuiTable: {
+      styleOverrides: {
+        root: {
+          minWidth: "200px !important",
+        },
       },
     },
-  },
-  MuiTableCell : {
-    styleOverrides : {
-      root : {
+    MuiTableCell: {
+      styleOverrides: {
+        root: {
           fontSize: "0.8rem",
-      "@media (max-width:640px)": { fontSize: "0.6rem" }, // sm ve altı
-      "@media (min-width:1024px)": { fontSize: "1rem" }, // lg
-      }
-    }
-  }
-  },
+          "@media (max-width:640px)": { fontSize: "0.6rem" }, // sm ve altı
+          "@media (min-width:1024px)": { fontSize: "1rem" }, // lg
+        },
+      },
+    },
+   
+}
 });
 
- theme = responsiveFontSizes(theme);
-export default theme
+theme = responsiveFontSizes(theme);
+export default theme;

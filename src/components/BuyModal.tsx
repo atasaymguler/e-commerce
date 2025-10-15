@@ -1,6 +1,6 @@
 import Box from "@mui/material/Box";
 
-import { Button, Modal, TextField } from "@mui/material";
+import { Button, Modal, TextField, Typography } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../redux/store";
 import { setBuyModal } from "../redux/slice/appSlice";
@@ -16,17 +16,7 @@ import pastOrders from "../services/PastOrdersService";
 import { resetsTheBasket } from "../redux/slice/productSlice";
 
 export default function BuyModal() {
-  const style = {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    width: 400,
-    bgcolor: "background.paper",
-    border: "2px solid #000",
-    boxShadow: 24,
-    p: 4,
-  };
+ 
   const { buyModal } = useSelector((state: RootState) => state.app);
   const dispatch = useDispatch();
   const [controlSms, setControlSms] = useState<string>("");
@@ -96,8 +86,29 @@ export default function BuyModal() {
     });
   return (
     <Modal open={buyModal} onClose={closeBuyModal}>
-      <Box sx={style}>
-        <h1 className="text-center text-2xl">Ödeme Paneli</h1>
+      <Box sx={{
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      backgroundColor: "#fff",
+      border: "2px solid #000",
+      boxShadow: 24,
+      p: 4,
+      width: 500,
+      maxWidth: "90vw",
+      maxHeight: "90vh",
+      overflow: "auto",
+
+      "@media (max-width:640px)": {
+        width: "80vw", // Daha mantıklı bir değer
+      },
+      "@media (min-width:1024px)": {
+        width: "500px", // Sabit genişlik veya "40vw"
+      },
+    }}>
+        <h1 className="text-center text-2xl"></h1>
+         <Typography variant="h4" sx={{textAlign:"center",marginBottom:"4px"}}>Ödeme Paneli</Typography>
         <form onSubmit={handleSubmit}>
           <div className="!mt-3">
             <TextField

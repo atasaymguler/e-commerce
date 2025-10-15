@@ -2,31 +2,17 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import { useDispatch, useSelector } from "react-redux";
 import type { AppDispatch, RootState } from "../redux/store";
-import { Button, TextField } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import {
   closeBackdrop,
   openBackdrop,
   setDeleteProductModal,
   setProductToBeDeleted,
 } from "../redux/slice/appSlice";
-import { useState } from "react";
 import { toast } from "react-toastify";
 import productService from "../services/ProductService";
 import { getProductByPage } from "../redux/slice/productSlice";
-import { useAppDispatch } from "../pages/Products/hooks";
 import { getPage } from "../functions/getPage";
-
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
-};
 
 export default function DeleteProductModal() {
   const { deleteProductModal } = useSelector((state: RootState) => state.app);
@@ -74,11 +60,32 @@ export default function DeleteProductModal() {
   return (
     <div>
       <Modal open={deleteProductModal} onClose={closeDeleteProductModal}>
-        <Box sx={style}>
-          <h1 className="text-2xl !mb-2 text-center">Ürün Silme</h1>
-          <p className="text-center">
+        <Box sx={{
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      backgroundColor: "#fff",
+      border: "2px solid #000",
+      boxShadow: 24,
+      p: 4,
+      width: 500,
+      maxWidth: "90vw",
+      maxHeight: "90vh",
+      overflow: "auto",
+
+      "@media (max-width:640px)": {
+        width: "80vw", // Daha mantıklı bir değer
+      },
+      "@media (min-width:1024px)": {
+        width: "500px", // Sabit genişlik veya "40vw"
+      },
+    }}>
+          
+           <Typography variant="h4" sx={{textAlign:"center",marginBottom:"4px"}}>Ürün Silme</Typography>
+          <Typography variant="body2" className="text-center">
             Ürünü silmek istediğinize emin misiniz ?
-          </p>
+          </Typography>
 
           <div className="flex justify-center items-center !mt-4 gap-5">
             <Button

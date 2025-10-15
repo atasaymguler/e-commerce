@@ -6,25 +6,13 @@ import type { RootState } from '../redux/store';
 import { closeBackdrop, openBackdrop, setProductToBeUpdated, setUpdateProductModal } from '../redux/slice/appSlice';
 import { useFormik } from 'formik';
 import { addProductSchema } from '../schema/AddProductSchema';
-import { TextField } from '@mui/material';
+import { TextField, Typography } from '@mui/material';
 import type { AddProductType, ProductType } from '../types/Types';
 import { useAppDispatch } from '../pages/Products/hooks';
 import productService from '../services/ProductService';
 import { toast } from 'react-toastify';
 import { getProductByPage } from '../redux/slice/productSlice';
 import { getPage } from '../functions/getPage';
-
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 24,
-  p: 4,
-};
 
 export default function UpdateProductModal() {
   
@@ -86,8 +74,29 @@ export default function UpdateProductModal() {
         onClose={handleClose}
      
       >
-        <Box sx={style}>
-            <h1 className='text-2xl !mb-2 text-center'>Ürün Güncelle</h1>
+        <Box sx={{
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      backgroundColor: "#fff",
+      border: "2px solid #000",
+      boxShadow: 24,
+      p: 4,
+      width: 500,
+      maxWidth: "90vw",
+      maxHeight: "90vh",
+      overflow: "auto",
+
+      "@media (max-width:640px)": {
+        width: "80vw", // Daha mantıklı bir değer
+      },
+      "@media (min-width:1024px)": {
+        width: "500px", // Sabit genişlik veya "40vw"
+      },
+    }}>
+            <h1 className='text-2xl !mb-2 text-center'></h1>
+            <Typography variant="h4" sx={{textAlign:"center",marginBottom:"4px"}}>Ürün Güncelle</Typography>
            <div>
             <form onSubmit={handleSubmit}>
                  <div className='!mb-3'>
