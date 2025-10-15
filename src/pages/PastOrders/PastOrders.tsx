@@ -12,6 +12,7 @@ import type { RootState } from '../../redux/store';
 import { useEffect, useState } from 'react';
 import type { PastOrdersType, ProductType, SelectedProduct } from '../../types/Types';
 import { toast } from 'react-toastify';
+import { Typography } from '@mui/material';
 
 export default function PastOrders() {
 
@@ -45,7 +46,7 @@ export default function PastOrders() {
 
   return (
     <div >
-         <h1 className="text-3xl font-bold text-center !mb-3">Geçmiş Siparişler</h1>
+         <Typography variant='h3' sx={{textAlign:"center"}}>Geçmiş Siparişler</Typography>
   
      <div className='!my-3'>
    {

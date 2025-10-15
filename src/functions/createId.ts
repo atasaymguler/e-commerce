@@ -1,5 +1,4 @@
 import userService from "../services/UserService";
-import type { RegisterUserType } from "../types/Types";
 
 export const createId = async (): Promise<string> => {
   let index: number;

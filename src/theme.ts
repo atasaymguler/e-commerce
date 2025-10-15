@@ -24,9 +24,14 @@ let theme = createTheme({
       fontSize: "2.25rem", // ~36px
     },
     h3: {
+      fontWeight: 600,
+      fontSize: "1.6rem", //
+    },
+     h4: {
       fontWeight: 500,
       fontSize: "1.2rem", //
     },
+    
     body1: {
       fontSize: "1rem", // ~16px
       lineHeight: 1.5,
@@ -118,6 +123,23 @@ let theme = createTheme({
       },
     },
   },
+  MuiTable : {
+    styleOverrides :{
+      root:{
+        minWidth : "200px !important",
+
+      },
+    },
+  },
+  MuiTableCell : {
+    styleOverrides : {
+      root : {
+          fontSize: "0.8rem",
+      "@media (max-width:640px)": { fontSize: "0.6rem" }, // sm ve altı
+      "@media (min-width:1024px)": { fontSize: "1rem" }, // lg
+      }
+    }
+  }
   },
 });
 
