@@ -1,0 +1,30 @@
+
+.Toastify__toast {
+  width: auto !important;
+  min-height: 50px !important;
+  font-family: 'Arial', sans-serif !important;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .Toastify__toast {
+    width: 60vw !important;
+    font-size: 11px !important;
+  }
+}
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .Toastify__toast {
+    width: 300px !important;
+    font-size: 14px !important;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .Toastify__toast {
+    width: 350px !important;
+    font-size: 15px !important;
+  }
+}
